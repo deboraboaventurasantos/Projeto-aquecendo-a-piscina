@@ -122,9 +122,6 @@ const barraProgresso =
 const statusSistema =
     document.getElementById("statusSistema");
 
-const explicacao =
-    document.getElementById("explicacao");
-
 
 /*
     Simulador didático.
@@ -159,7 +156,6 @@ function executarSimulacao() {
         !porcentagem ||
         !barraProgresso ||
         !statusSistema ||
-        !explicacao
     ) {
 
         console.error(
@@ -255,34 +251,7 @@ function executarSimulacao() {
             'Temperatura atingida! O aquecimento pode permanecer desligado.';
 
 
-        explicacao.innerHTML = `
-
-            <h4>
-                Sistema estabilizado
-            </h4>
-
-            <p>
-                O sensor identificou
-                <strong>${atual.toFixed(1)} °C</strong>,
-                enquanto a temperatura desejada é
-                <strong>${desejada.toFixed(1)} °C</strong>.
-            </p>
-
-            <p>
-                Como a água já atingiu ou ultrapassou a
-                temperatura programada, o controlador pode
-                manter o aquecimento desligado.
-            </p>
-
-            <p>
-                O sensor continua realizando medições.
-                Caso a temperatura volte a diminuir,
-                o sistema poderá acionar novamente
-                o aquecimento.
-            </p>
-
-        `;
-
+       
         return;
     }
 
@@ -424,61 +393,6 @@ function executarSimulacao() {
     statusSistema.innerHTML =
         '<i class="fa-solid fa-fire"></i> ' +
         'Aquecimento necessário. O controlador pode acionar o sistema.';
-
-
-    /* =================================================
-       EXPLICAÇÃO
-    ================================================= */
-
-    explicacao.innerHTML = `
-
-        <h4>
-            Resultado da simulação
-        </h4>
-
-        <p>
-            O sensor identificou uma temperatura de
-            <strong>${atual.toFixed(1)} °C</strong>,
-            enquanto o valor programado é
-            <strong>${desejada.toFixed(1)} °C</strong>.
-        </p>
-
-        <p>
-            A diferença de temperatura é de
-            <strong>${delta.toFixed(1)} °C</strong>.
-            Como a água está abaixo da temperatura
-            desejada, o controlador entende que
-            o aquecimento deve ser acionado.
-        </p>
-
-        <p>
-            A condição solar foi configurada como
-            <strong>${textoSol}</strong>.
-            Neste modelo didático, uma maior
-            intensidade solar diminui a necessidade
-            de aquecimento complementar.
-        </p>
-
-        <p>
-            A necessidade estimada de aquecimento
-            complementar é de aproximadamente
-            <strong>${Math.round(necessidadeComplementar)}%</strong>.
-        </p>
-
-        <p>
-            O tempo estimado de
-            <strong>${tempoEstimado.toFixed(1)} horas</strong>
-            é apenas uma representação educativa.
-            Um sistema real precisaria considerar
-            fatores como volume de água, potência
-            térmica, área dos coletores, temperatura
-            ambiente, perdas de calor e condições
-            climáticas.
-        </p>
-
-    `;
-
-}
 
 
 /* =====================================================
