@@ -80,51 +80,6 @@ topBtn.addEventListener("click", () => {
 
 
 /* =====================================================
-   MODELO 3D
-===================================================== */
-
-const modelo = document.getElementById("modelo");
-
-const rotacaoX = document.getElementById("rotacaoX");
-const rotacaoY = document.getElementById("rotacaoY");
-
-const resetModelo =
-    document.getElementById("resetModelo");
-
-
-function atualizarModelo() {
-
-    const x = rotacaoX.value;
-    const y = rotacaoY.value;
-
-    modelo.style.transform =
-        `rotateX(${x}deg) rotateY(${y}deg)`;
-
-}
-
-
-rotacaoX.addEventListener(
-    "input",
-    atualizarModelo
-);
-
-rotacaoY.addEventListener(
-    "input",
-    atualizarModelo
-);
-
-
-resetModelo.addEventListener("click", () => {
-
-    rotacaoX.value = 15;
-    rotacaoY.value = -15;
-
-    atualizarModelo();
-
-});
-
-
-/* =====================================================
    SIMULADOR
 ===================================================== */
 
@@ -137,12 +92,6 @@ const tempAtual =
 const tempDesejada =
     document.getElementById("tempDesejada");
 
-const tempAmbiente =
-    document.getElementById("tempAmbiente");
-
-const volumePiscina =
-    document.getElementById("volumePiscina");
-
 const sol =
     document.getElementById("sol");
 
@@ -150,14 +99,8 @@ const sol =
 const diferenca =
     document.getElementById("diferenca");
 
-const potencia =
-    document.getElementById("potencia");
-
 const tempo =
     document.getElementById("tempo");
-
-const bombaStatus =
-    document.getElementById("bombaStatus");
 
 const porcentagem =
     document.getElementById("porcentagem");
@@ -191,12 +134,6 @@ function executarSimulacao() {
     const desejada =
         Number(tempDesejada.value);
 
-    const ambiente =
-        Number(tempAmbiente.value);
-
-    const volume =
-        Number(volumePiscina.value);
-
     const intensidadeSolar =
         Number(sol.value);
 
@@ -208,8 +145,6 @@ function executarSimulacao() {
     if (
         isNaN(atual) ||
         isNaN(desejada) ||
-        isNaN(ambiente) ||
-        isNaN(volume)
     ) {
 
         statusSistema.innerHTML =
@@ -284,27 +219,6 @@ function executarSimulacao() {
         return;
     }
 
-
-    /* ---------------------------------------------
-       POTÊNCIA DIDÁTICA
-    --------------------------------------------- */
-
-    /*
-       A potência é estimada apenas para o simulador.
-
-       Quanto maior o volume e a diferença de temperatura,
-       maior é a necessidade energética.
-
-       A intensidade solar reduz parcialmente a necessidade
-       de energia externa na simulação.
-    */
-
-
-    const basePotencia =
-        2.5 +
-        (volume / 10000) * 0.8;
-
-
     const fatorTemperatura =
         Math.min(delta / 10, 2);
 
@@ -313,26 +227,7 @@ function executarSimulacao() {
         intensidadeSolar * 0.8;
 
 
-    let potenciaEstimada =
-        basePotencia *
-        fatorTemperatura *
-        (1 - aproveitamentoSolar);
 
-
-    /*
-       Evita que o valor fique extremamente baixo
-       quando existe necessidade de aquecimento.
-    */
-
-    potenciaEstimada =
-        Math.max(
-            potenciaEstimada,
-            0.8
-        );
-
-
-    potencia.textContent =
-        `${potenciaEstimada.toFixed(1)} kW`;
 
 
     /* ---------------------------------------------
@@ -371,15 +266,6 @@ function executarSimulacao() {
 
     tempo.textContent =
         `${tempoEstimado.toFixed(1)} h`;
-
-
-    /* ---------------------------------------------
-       STATUS DA BOMBA
-    --------------------------------------------- */
-
-    bombaStatus.textContent =
-        "Ligada";
-
 
     /* ---------------------------------------------
        NECESSIDADE DE AQUECIMENTO
