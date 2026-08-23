@@ -1,6 +1,6 @@
-/* =========================
+/* =====================================================
    RESET
-========================= */
+===================================================== */
 
 * {
     margin: 0;
@@ -9,765 +9,1673 @@
     scroll-behavior: smooth;
 }
 
+
 :root {
 
-    --azul: #b9ddec;
-    --azul-claro: #e9f6fb;
-    --azul-escuro: #315b6d;
+    /* CORES PRINCIPAIS */
 
-    --amarelo: #eadb92;
-    --amarelo-claro: #f5e9a8;
+    --azul: #294e80;
+    --amarelo: #fdff87;
+    --roxo: #a55cd8;
+    --verde: #5ddb49;
 
-    --lilas: #d8c8ee;
-    --lilas-claro: #eee7f8;
+    /* CORES NEUTRAS */
 
     --branco: #ffffff;
-    --preto: #222222;
-    --cinza: #59636a;
+    --preto: #111111;
+    --cinza: #4f555b;
 
-    --sombra: 0 10px 30px rgba(50, 70, 80, 0.12);
+    --fundo-claro: #f5f7fa;
+
+    --sombra:
+        0 10px 30px rgba(0, 0, 0, 0.12);
+
 }
+
+
+/* =====================================================
+   BODY
+===================================================== */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: var(--azul-claro);
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--fundo-claro);
+
     color: var(--preto);
+
     line-height: 1.7;
+
 }
 
 
-/* =========================
+/* =====================================================
    ACESSIBILIDADE
-========================= */
+===================================================== */
 
 a:focus,
 button:focus,
 input:focus {
-    outline: 3px solid #222;
-    outline-offset: 3px;
+
+    outline:
+        3px solid #111;
+
+    outline-offset:
+        3px;
+
 }
 
 
-/* =========================
+/* =====================================================
    HEADER
-========================= */
+===================================================== */
 
 header {
+
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
+
     z-index: 1000;
 
-    background: rgba(185, 221, 236, 0.96);
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    background:
+        rgba(41, 78, 128, 0.97);
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.15);
+
 }
 
+
 .navbar {
-    max-width: 1200px;
-    margin: auto;
+
+    max-width: 1250px;
 
     min-height: 75px;
 
+    margin: auto;
+
+    padding:
+        0 30px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
-    padding: 0 30px;
 }
+
 
 .logo {
-    color: var(--azul-escuro);
+
+    color: var(--branco);
+
     text-decoration: none;
+
     font-size: 22px;
+
     font-weight: bold;
+
 }
+
 
 .logo i {
+
     margin-right: 8px;
+
 }
+
 
 .menu {
-    list-style: none;
+
     display: flex;
-    gap: 25px;
+
+    align-items: center;
+
+    gap: 22px;
+
+    list-style: none;
+
 }
+
 
 .menu a {
-    color: var(--azul-escuro);
+
+    color: var(--branco);
+
     text-decoration: none;
+
     font-weight: bold;
-    transition: 0.3s;
+
+    transition:
+        0.3s;
+
 }
+
 
 .menu a:hover {
-    color: #111;
+
+    color: var(--amarelo);
+
 }
+
 
 .menu-btn {
+
     display: none;
+
     border: none;
+
     background: transparent;
-    color: var(--azul-escuro);
-    font-size: 25px;
+
+    color: white;
+
+    font-size: 26px;
+
     cursor: pointer;
+
 }
 
 
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    min-height: 100vh;
-
-    background:
-        linear-gradient(
-            135deg,
-            #b9ddec,
-            #d9edf5
-        );
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    position: relative;
-    overflow: hidden;
-
-    padding: 120px 8% 80px;
-}
-
-.hero-content {
-    max-width: 850px;
-    position: relative;
-    z-index: 2;
-}
-
-.tag {
-    display: inline-block;
-
-    background: rgba(255,255,255,0.7);
-    color: var(--azul-escuro);
-
-    padding: 8px 18px;
-    border-radius: 30px;
-
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.hero h1 {
-    font-size: clamp(40px, 7vw, 72px);
-    line-height: 1.1;
-
-    color: var(--azul-escuro);
-
-    margin-bottom: 25px;
-}
-
-.hero p {
-    font-size: 20px;
-    max-width: 750px;
-    margin: auto auto 35px;
-
-    color: #344c57;
-}
+/* =====================================================
+   BOTÕES
+===================================================== */
 
 .btn {
+
     display: inline-flex;
+
     align-items: center;
+
+    justify-content: center;
+
     gap: 10px;
 
-    padding: 14px 28px;
+    padding:
+        14px 28px;
 
-    background: var(--azul-escuro);
-    color: white;
+    background:
+        var(--azul);
+
+    color:
+        white;
 
     text-decoration: none;
+
     border: none;
-    border-radius: 30px;
+
+    border-radius:
+        30px;
 
     font-weight: bold;
+
     cursor: pointer;
 
-    transition: 0.3s;
+    transition:
+        0.3s;
+
 }
+
 
 .btn:hover {
-    transform: translateY(-3px);
-    background: #254a5b;
+
+    transform:
+        translateY(-3px);
+
+    filter:
+        brightness(0.85);
+
 }
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero {
+
+    min-height:
+        100vh;
+
+    padding:
+        130px 8% 80px;
+
+    background:
+        var(--azul);
+
+    color:
+        white;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    text-align:
+        center;
+
+    position:
+        relative;
+
+    overflow:
+        hidden;
+
+}
+
+
+.hero-content {
+
+    max-width:
+        900px;
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+}
+
+
+.tag {
+
+    display:
+        inline-block;
+
+    padding:
+        8px 18px;
+
+    margin-bottom:
+        20px;
+
+    border-radius:
+        30px;
+
+    background:
+        rgba(255,255,255,0.15);
+
+    color:
+        white;
+
+    font-weight:
+        bold;
+
+}
+
+
+.hero h1 {
+
+    font-size:
+        clamp(42px, 7vw, 75px);
+
+    line-height:
+        1.08;
+
+    margin-bottom:
+        25px;
+
+}
+
+
+.hero p {
+
+    max-width:
+        800px;
+
+    margin:
+        auto auto 35px;
+
+    font-size:
+        20px;
+
+}
+
+
+.hero .btn {
+
+    background:
+        white;
+
+    color:
+        var(--azul);
+
+}
+
 
 .hero-decoration {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    pointer-events:
+        none;
+
 }
+
 
 .hero-decoration i {
-    position: absolute;
-    font-size: 130px;
-    opacity: 0.08;
+
+    position:
+        absolute;
+
+    font-size:
+        150px;
+
+    opacity:
+        0.08;
+
 }
+
 
 .hero-decoration i:first-child {
-    top: 20%;
-    right: 10%;
+
+    top:
+        20%;
+
+    right:
+        10%;
+
 }
+
 
 .hero-decoration i:last-child {
-    bottom: 10%;
-    left: 8%;
+
+    bottom:
+        10%;
+
+    left:
+        8%;
+
 }
 
 
-/* =========================
+/* =====================================================
    SEÇÕES
-========================= */
+===================================================== */
 
 .section {
-    padding: 100px 8%;
+
+    padding:
+        100px 8%;
+
 }
+
 
 .section-title {
-    max-width: 850px;
-    margin: auto auto 60px;
-    text-align: center;
+
+    max-width:
+        900px;
+
+    margin:
+        0 auto 60px;
+
+    text-align:
+        center;
+
 }
+
 
 .section-title > span {
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    color: var(--azul-escuro);
+
+    display:
+        inline-block;
+
+    font-size:
+        13px;
+
+    font-weight:
+        bold;
+
+    letter-spacing:
+        3px;
+
+    margin-bottom:
+        8px;
+
 }
+
 
 .section-title h2 {
-    font-size: clamp(32px, 5vw, 48px);
-    line-height: 1.2;
-    margin: 10px 0 20px;
+
+    font-size:
+        clamp(32px, 5vw, 50px);
+
+    line-height:
+        1.2;
+
+    margin-bottom:
+        20px;
+
 }
+
 
 .section-title p {
-    font-size: 18px;
+
+    font-size:
+        18px;
+
 }
 
 
-/* =========================
+/* =====================================================
    PROJETO
-========================= */
+===================================================== */
 
 .projeto {
-    background: #e7f4f9;
+
+    background:
+        var(--azul);
+
+    color:
+        white;
+
 }
+
+
+.projeto .section-title > span {
+
+    color:
+        var(--amarelo);
+
+}
+
+
+.projeto .section-title h2,
+.projeto .section-title p {
+
+    color:
+        white;
+
+}
+
 
 .content-grid {
-    max-width: 1200px;
-    margin: auto;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    max-width:
+        1200px;
 
-    gap: 60px;
-    align-items: center;
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        60px;
+
+    align-items:
+        center;
+
 }
+
 
 .text-content h3 {
-    color: var(--azul-escuro);
-    font-size: 25px;
-    margin-bottom: 20px;
+
+    font-size:
+        26px;
+
+    margin-bottom:
+        20px;
+
 }
 
-.text-content h3 i {
-    margin-right: 8px;
-}
 
 .text-content p {
-    margin-bottom: 20px;
-    color: #40515a;
+
+    margin-bottom:
+        20px;
+
 }
+
+
+.projeto .text-content h3 {
+
+    color:
+        var(--amarelo);
+
+}
+
+
+/* =====================================================
+   IMAGENS DO PROJETO
+===================================================== */
 
 .image-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        20px;
+
 }
+
 
 .image-card {
-    background: white;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: var(--sombra);
+
+    background:
+        white;
+
+    border-radius:
+        18px;
+
+    overflow:
+        hidden;
+
+    box-shadow:
+        var(--sombra);
+
 }
+
 
 .image-card img {
-    display: block;
 
-    width: 100%;
-    height: 280px;
+    width:
+        100%;
 
-    object-fit: cover;
+    height:
+        280px;
 
-    transition: 0.4s;
+    object-fit:
+        cover;
+
+    display:
+        block;
+
+    transition:
+        0.4s;
+
 }
+
 
 .image-card:hover img {
-    transform: scale(1.04);
+
+    transform:
+        scale(1.05);
+
 }
+
 
 .image-card figcaption {
-    padding: 15px;
-    text-align: center;
-    font-weight: bold;
-    color: var(--azul-escuro);
+
+    padding:
+        15px;
+
+    text-align:
+        center;
+
+    color:
+        var(--azul);
+
+    font-weight:
+        bold;
+
 }
 
 
-/* =========================
+/* =====================================================
    ÓPTICA
-========================= */
+===================================================== */
 
 .optica {
-    background: var(--amarelo);
-    color: white;
+
+    background:
+        var(--amarelo);
+
+    color:
+        var(--preto);
+
 }
+
 
 .optica .section-title > span {
-    color: #222;
+
+    color:
+        var(--preto);
+
 }
 
-.optica .section-title h2 {
-    color: white;
-}
 
+.optica .section-title h2,
 .optica .section-title p {
-    color: white;
+
+    color:
+        var(--preto);
+
 }
 
-.light-text,
-.light-text p,
-.light-text h3 {
-    color: white;
+
+.content-wide {
+
+    max-width:
+        1100px;
+
+    margin:
+        auto;
+
 }
 
-.optica .text-content h3 {
-    color: white;
+
+.content-wide h3 {
+
+    font-size:
+        27px;
+
+    margin-bottom:
+        20px;
+
 }
 
-.optica .image-card {
-    background: rgba(255,255,255,0.9);
+
+.content-wide h3 i {
+
+    margin-right:
+        8px;
+
 }
 
-.optica .image-card figcaption {
-    color: #222;
+
+.content-wide p {
+
+    margin-bottom:
+        20px;
+
 }
+
+
+/* =====================================================
+   FENÔMENOS ÓPTICOS
+===================================================== */
 
 .phenomena {
-    max-width: 1200px;
-    margin: 100px auto 0;
+
+    max-width:
+        1200px;
+
+    margin:
+        90px auto 0;
+
 }
+
+
+.phenomena .section-title {
+
+    margin-bottom:
+        40px;
+
+}
+
 
 .phenomena-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap:
+        20px;
+
 }
+
 
 .phenomena-grid article {
-    background: rgba(255,255,255,0.17);
-    border: 1px solid rgba(0,0,0,0.15);
 
-    padding: 30px 22px;
-    border-radius: 18px;
+    padding:
+        30px 22px;
 
-    color: white;
+    background:
+        rgba(255,255,255,0.35);
+
+    border:
+        2px solid rgba(0,0,0,0.15);
+
+    border-radius:
+        18px;
+
+    transition:
+        0.3s;
+
 }
+
+
+.phenomena-grid article:hover {
+
+    transform:
+        translateY(-6px);
+
+}
+
 
 .phenomena-grid i {
-    font-size: 35px;
-    color: #222;
-    margin-bottom: 15px;
+
+    font-size:
+        35px;
+
+    color:
+        var(--preto);
+
+    margin-bottom:
+        15px;
+
 }
+
 
 .phenomena-grid h3 {
-    color: white;
-    margin-bottom: 12px;
+
+    margin-bottom:
+        12px;
+
 }
 
-.phenomena-grid p {
-    color: white;
-}
+
+/* =====================================================
+   CONCEITOS ÓPTICA
+===================================================== */
 
 .optica-concepts {
-    max-width: 1000px;
-    margin: 70px auto 0;
 
-    padding: 35px;
+    max-width:
+        1000px;
 
-    border: 2px solid rgba(0,0,0,0.2);
-    border-radius: 20px;
+    margin:
+        70px auto 0;
+
+    padding:
+        35px;
+
+    border:
+        2px solid var(--preto);
+
+    border-radius:
+        20px;
+
 }
+
 
 .optica-concepts h3 {
-    color: white;
-    margin-bottom: 25px;
-    text-align: center;
-    font-size: 25px;
+
+    text-align:
+        center;
+
+    margin-bottom:
+        25px;
+
+    font-size:
+        26px;
+
 }
+
 
 .concept-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap:
+        20px;
+
 }
+
 
 .concept-list div {
-    background: rgba(0,0,0,0.08);
-    padding: 20px;
-    border-radius: 12px;
+
+    padding:
+        20px;
+
+    background:
+        rgba(255,255,255,0.3);
+
+    border-radius:
+        12px;
+
 }
+
 
 .concept-list strong {
-    color: #222;
-    display: block;
-    margin-bottom: 8px;
+
+    display:
+        block;
+
+    margin-bottom:
+        8px;
+
 }
 
-.concept-list p {
-    color: white;
-}
 
-
-/* =========================
+/* =====================================================
    ROBÓTICA
-========================= */
+===================================================== */
 
 .robotica {
-    background: var(--lilas-claro);
+
+    background:
+        var(--roxo);
+
+    color:
+        white;
+
 }
+
 
 .robotica .section-title > span {
-    color: #70588d;
+
+    color:
+        var(--amarelo);
+
 }
 
-.robotica .text-content h3 {
-    color: #70588d;
+
+.robotica .section-title h2,
+.robotica .section-title p {
+
+    color:
+        white;
+
 }
+
+
+.robotica .content-wide h3 {
+
+    color:
+        white;
+
+}
+
 
 .flow {
-    max-width: 1200px;
-    margin: 90px auto 0;
+
+    max-width:
+        1200px;
+
+    margin:
+        90px auto 0;
+
 }
+
 
 .flow > h2 {
-    text-align: center;
-    color: #70588d;
-    margin-bottom: 40px;
+
+    text-align:
+        center;
+
+    margin-bottom:
+        40px;
+
 }
+
 
 .flow-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
 }
+
 
 .flow-item {
-    width: 190px;
 
-    background: white;
-    padding: 25px 15px;
+    width:
+        190px;
 
-    text-align: center;
+    min-height:
+        190px;
 
-    border-radius: 18px;
+    padding:
+        25px 15px;
 
-    box-shadow: var(--sombra);
+    background:
+        white;
+
+    color:
+        var(--preto);
+
+    border-radius:
+        18px;
+
+    text-align:
+        center;
+
+    box-shadow:
+        var(--sombra);
+
 }
+
 
 .flow-item span {
-    display: block;
 
-    color: #8b6fa8;
-    font-weight: bold;
+    display:
+        block;
+
+    color:
+        var(--roxo);
+
+    font-weight:
+        bold;
+
 }
+
 
 .flow-item i {
-    font-size: 35px;
-    color: #8b6fa8;
-    margin: 10px;
+
+    font-size:
+        35px;
+
+    color:
+        var(--roxo);
+
+    margin:
+        10px;
+
 }
+
 
 .flow-item h3 {
-    color: #70588d;
+
+    color:
+        var(--roxo);
+
 }
+
 
 .flow-line {
-    width: 50px;
-    height: 3px;
-    background: #b59ccc;
+
+    width:
+        50px;
+
+    height:
+        3px;
+
+    background:
+        white;
+
 }
+
 
 .closed-loop {
-    max-width: 900px;
-    margin: 60px auto 0;
 
-    background: #d8c8ee;
+    max-width:
+        900px;
 
-    padding: 30px;
-    border-radius: 18px;
+    margin:
+        60px auto 0;
 
-    text-align: center;
+    padding:
+        30px;
+
+    background:
+        rgba(255,255,255,0.18);
+
+    border:
+        2px solid rgba(255,255,255,0.4);
+
+    border-radius:
+        18px;
+
+    text-align:
+        center;
+
 }
+
 
 .closed-loop h3 {
-    color: #59456f;
-    margin-bottom: 15px;
+
+    margin-bottom:
+        15px;
+
 }
 
 
-/* =========================
+/* =====================================================
+   INCLUSÃO
+===================================================== */
+
+.inclusao {
+
+    background:
+        var(--verde);
+
+    color:
+        var(--preto);
+
+}
+
+
+.inclusao .section-title > span {
+
+    color:
+        var(--preto);
+
+}
+
+
+.inclusao .section-title h2 {
+
+    color:
+        var(--preto);
+
+}
+
+
+.inclusao-content {
+
+    max-width:
+        1100px;
+
+    margin:
+        auto;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        250px 1fr;
+
+    gap:
+        50px;
+
+    align-items:
+        center;
+
+}
+
+
+.inclusao-icon {
+
+    width:
+        210px;
+
+    height:
+        210px;
+
+    margin:
+        auto;
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(255,255,255,0.45);
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+}
+
+
+.inclusao-icon i {
+
+    font-size:
+        90px;
+
+}
+
+
+.inclusao-text {
+
+    background:
+        rgba(255,255,255,0.35);
+
+    padding:
+        35px;
+
+    border-radius:
+        20px;
+
+}
+
+
+.inclusao-text h3 {
+
+    font-size:
+        28px;
+
+    margin-bottom:
+        20px;
+
+}
+
+
+.inclusao-text p {
+
+    margin-bottom:
+        18px;
+
+}
+
+
+/* =====================================================
    SIMULADOR
-========================= */
+===================================================== */
 
 .simulador {
-    background: #e8f5fa;
+
+    background:
+        #f3f6f9;
+
 }
+
 
 .simulator-box {
-    max-width: 850px;
-    margin: auto;
 
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 40px;
+    max-width:
+        850px;
 
-    background: white;
+    margin:
+        auto;
 
-    padding: 40px;
+    display:
+        grid;
 
-    border-radius: 25px;
+    grid-template-columns:
+        1fr 1.5fr;
 
-    box-shadow: var(--sombra);
+    gap:
+        40px;
+
+    padding:
+        40px;
+
+    background:
+        white;
+
+    border-radius:
+        25px;
+
+    box-shadow:
+        var(--sombra);
+
 }
+
 
 .temperature-display {
-    display: flex;
-    flex-direction: column;
 
-    justify-content: center;
-    align-items: center;
+    display:
+        flex;
 
-    text-align: center;
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
 }
+
 
 .temperature-display i {
-    font-size: 60px;
-    color: #76abc1;
+
+    font-size:
+        60px;
+
+    color:
+        var(--azul);
+
 }
+
 
 .temperature-display strong {
-    font-size: 45px;
-    color: var(--azul-escuro);
+
+    font-size:
+        45px;
+
+    color:
+        var(--azul);
+
 }
+
 
 .temperature-display span {
-    color: var(--cinza);
+
+    color:
+        var(--cinza);
+
 }
+
 
 .simulator-controls {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 15px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    justify-content:
+        center;
+
+    gap:
+        15px;
+
 }
+
 
 .simulator-controls label {
-    font-weight: bold;
-    color: var(--azul-escuro);
+
+    color:
+        var(--azul);
+
+    font-weight:
+        bold;
+
 }
+
 
 #setpoint {
-    width: 100%;
-    accent-color: #76abc1;
+
+    width:
+        100%;
+
+    accent-color:
+        var(--azul);
+
 }
 
-.simulator-controls .btn {
-    justify-content: center;
-}
 
 #simulationResult {
-    padding: 15px;
 
-    background: #eef8fb;
+    padding:
+        15px;
 
-    border-radius: 10px;
+    background:
+        #eef3f8;
 
-    color: var(--azul-escuro);
+    border-radius:
+        10px;
+
+    color:
+        var(--azul);
+
 }
 
 
-/* =========================
+/* =====================================================
    PROJETO 3D
-========================= */
+===================================================== */
 
 .projeto-3d {
-    background: #e7f4f9;
+
+    background:
+        var(--azul);
+
+    color:
+        white;
+
 }
+
+
+.projeto-3d .section-title > span {
+
+    color:
+        var(--amarelo);
+
+}
+
 
 .model-placeholder {
-    max-width: 800px;
-    min-height: 300px;
 
-    margin: auto;
+    max-width:
+        850px;
 
-    background: white;
+    min-height:
+        330px;
 
-    border: 2px dashed #94c2d4;
+    margin:
+        auto;
 
-    border-radius: 25px;
+    padding:
+        40px;
 
-    display: flex;
-    flex-direction: column;
+    display:
+        flex;
 
-    justify-content: center;
-    align-items: center;
+    flex-direction:
+        column;
 
-    text-align: center;
+    align-items:
+        center;
 
-    padding: 40px;
+    justify-content:
+        center;
+
+    text-align:
+        center;
+
+    background:
+        rgba(255,255,255,0.12);
+
+    border:
+        2px dashed rgba(255,255,255,0.7);
+
+    border-radius:
+        25px;
+
 }
+
 
 .model-placeholder i {
-    font-size: 70px;
-    color: #76abc1;
-    margin-bottom: 20px;
+
+    font-size:
+        75px;
+
+    color:
+        var(--amarelo);
+
+    margin-bottom:
+        20px;
+
 }
+
 
 .model-placeholder h3 {
-    color: var(--azul-escuro);
-    font-size: 28px;
+
+    font-size:
+        30px;
+
+    margin-bottom:
+        10px;
+
 }
 
 
-/* =========================
+/* =====================================================
    FOOTER
-========================= */
+===================================================== */
 
 footer {
-    background: #b9ddec;
-    color: var(--azul-escuro);
 
-    text-align: center;
+    background:
+        #1c3558;
 
-    padding: 45px 20px;
+    color:
+        white;
+
+    text-align:
+        center;
+
+    padding:
+        45px 20px;
+
 }
+
 
 footer h2 {
-    margin-bottom: 10px;
+
+    margin-bottom:
+        10px;
+
 }
+
 
 footer .copyright {
-    margin-top: 15px;
-    font-size: 14px;
+
+    margin-top:
+        15px;
+
+    font-size:
+        14px;
+
+    opacity:
+        0.8;
+
 }
 
 
-/* =========================
-   RESPONSIVO
-========================= */
+/* =====================================================
+   RESPONSIVIDADE
+===================================================== */
 
-@media (max-width: 900px) {
-
-    .content-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .phenomena-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .concept-list {
-        grid-template-columns: 1fr;
-    }
-
-    .flow-container {
-        flex-wrap: wrap;
-        gap: 15px;
-    }
-
-    .flow-line {
-        display: none;
-    }
-
-    .simulator-box {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-@media (max-width: 700px) {
-
-    .navbar {
-        padding: 0 20px;
-    }
-
-    .menu-btn {
-        display: block;
-    }
+@media (max-width: 1000px) {
 
     .menu {
-        display: none;
 
-        position: absolute;
+        gap:
+            12px;
 
-        top: 75px;
-        left: 0;
-
-        width: 100%;
-
-        background: #d9edf5;
-
-        flex-direction: column;
-
-        padding: 20px;
-
-        text-align: center;
     }
 
-    .menu.active {
-        display: flex;
+
+    .content-grid {
+
+        grid-template-columns:
+            1fr;
+
     }
 
-    .menu li {
-        margin: 8px 0;
-    }
-
-    .hero {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .section {
-        padding: 70px 20px;
-    }
-
-    .image-grid {
-        grid-template-columns: 1fr;
-    }
 
     .phenomena-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
     }
 
-    .image-card img {
-        height: 230px;
+
+    .concept-list {
+
+        grid-template-columns:
+            1fr;
+
     }
+
+
+    .inclusao-content {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .flow-container {
+
+        flex-wrap:
+            wrap;
+
+        gap:
+            15px;
+
+    }
+
+
+    .flow-line {
+
+        display:
+            none;
+
+    }
+
 
     .simulator-box {
-        padding: 25px;
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+}
+
+
+@media (max-width: 750px) {
+
+    .navbar {
+
+        padding:
+            0 20px;
+
+    }
+
+
+    .menu-btn {
+
+        display:
+            block;
+
+    }
+
+
+    .menu {
+
+        display:
+            none;
+
+        position:
+            absolute;
+
+        top:
+            75px;
+
+        left:
+            0;
+
+        width:
+            100%;
+
+        padding:
+            20px;
+
+        background:
+            var(--azul);
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+
+    }
+
+
+    .menu.active {
+
+        display:
+            flex;
+
+    }
+
+
+    .menu li {
+
+        margin:
+            7px 0;
+
+    }
+
+
+    .hero {
+
+        padding:
+            120px 20px 70px;
+
+    }
+
+
+    .hero p {
+
+        font-size:
+            17px;
+
+    }
+
+
+    .section {
+
+        padding:
+            75px 20px;
+
+    }
+
+
+    .image-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .phenomena-grid {
+
+        grid-template-columns:
+            1fr;
+
+    }
+
+
+    .image-card img {
+
+        height:
+            230px;
+
+    }
+
+
+    .simulator-box {
+
+        padding:
+            25px;
+
+    }
+
+
+    .inclusao-icon {
+
+        width:
+            170px;
+
+        height:
+            170px;
+
+    }
+
+
+    .inclusao-icon i {
+
+        font-size:
+            65px;
+
     }
 
 }
