@@ -1,0 +1,1463 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Projeto escolar de aquecimento sustentável da piscina utilizando conceitos de Óptica, Robótica, Programação e acessibilidade digital."
+    >
+
+    <title>Piscina Sustentável | Projeto Escolar</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Ícones -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+<!-- ==================================================
+     ACESSIBILIDADE
+================================================== -->
+
+<a class="skip-link" href="#conteudo">
+    Pular para o conteúdo
+</a>
+
+
+<div class="acessibilidade">
+
+    <button id="diminuirFonte" aria-label="Diminuir tamanho da fonte">
+        A-
+    </button>
+
+    <button id="fonteNormal" aria-label="Restaurar tamanho da fonte">
+        A
+    </button>
+
+    <button id="aumentarFonte" aria-label="Aumentar tamanho da fonte">
+        A+
+    </button>
+
+    <button id="altoContraste" aria-label="Ativar alto contraste">
+        <i class="fas fa-circle-half-stroke"></i>
+        Contraste
+    </button>
+
+</div>
+
+
+<!-- ==================================================
+     MENU
+================================================== -->
+
+<header>
+
+    <nav class="navbar">
+
+        <a href="#inicio" class="logo">
+            Piscina<span>Sustentável</span>
+        </a>
+
+
+        <button
+            id="menuBtn"
+            class="menu-btn"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+        >
+
+            <i class="fas fa-bars"></i>
+
+        </button>
+
+
+        <ul class="menu">
+
+            <li>
+                <a href="#inicio">Início</a>
+            </li>
+
+            <li>
+                <a href="#projeto">O Projeto</a>
+            </li>
+
+            <li>
+                <a href="#optica">Óptica</a>
+            </li>
+
+            <li>
+                <a href="#robotica">Robótica</a>
+            </li>
+
+            <li>
+                <a href="#acessibilidade">Acessibilidade</a>
+            </li>
+
+            <li>
+                <a href="#simulador">Simulador</a>
+            </li>
+
+            <li>
+                <a href="#modelo3d">Projeto 3D</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<main id="conteudo">
+
+
+<!-- ==================================================
+     INÍCIO
+================================================== -->
+
+<section id="inicio" class="hero secao-azul">
+
+    <div class="hero-conteudo">
+
+        <span class="etiqueta">
+            PROJETO ESCOLAR
+        </span>
+
+        <h1>
+            Piscina<br>
+            <strong>Sustentável</strong>
+        </h1>
+
+        <p>
+
+            Ciência, tecnologia e inovação aplicadas ao desenvolvimento
+            de uma proposta para o aquecimento da piscina do colégio.
+
+        </p>
+
+        <a href="#projeto" class="botao">
+
+            Conheça o projeto
+
+            <i class="fas fa-arrow-down"></i>
+
+        </a>
+
+    </div>
+
+
+    <div class="hero-grafico">
+
+        <div class="sol">
+
+            <i class="fas fa-sun"></i>
+
+        </div>
+
+
+        <div class="placa">
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+        </div>
+
+
+        <div class="onda onda1"></div>
+        <div class="onda onda2"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     PROJETO
+================================================== -->
+
+<section id="projeto" class="secao secao-azul">
+
+    <div class="cabecalho-secao">
+
+        <span class="numero">01</span>
+
+        <div>
+
+            <span class="mini-titulo">
+                PROPOSTA
+            </span>
+
+            <h2>
+                O Projeto
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="projeto-grid">
+
+        <div class="texto">
+
+            <p class="destaque">
+
+                A proposta é desenvolver um sistema de aquecimento
+                para a piscina do colégio utilizando conhecimentos
+                científicos e tecnológicos.
+
+            </p>
+
+
+            <p>
+
+                O projeto integra conceitos de Física, especialmente
+                da Óptica, com Robótica e Programação para representar
+                um sistema capaz de monitorar a temperatura da água
+                e controlar automaticamente seu aquecimento.
+
+            </p>
+
+
+            <p>
+
+                A utilização de energia solar e de sistemas automatizados
+                permite discutir alternativas tecnológicas que podem
+                contribuir para o uso mais consciente dos recursos
+                naturais.
+
+            </p>
+
+
+            <div class="dados-projeto">
+
+                <div>
+
+                    <i class="fas fa-sun"></i>
+
+                    <strong>
+                        Energia
+                    </strong>
+
+                    <span>
+                        Aproveitamento da radiação solar
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <i class="fas fa-microchip"></i>
+
+                    <strong>
+                        Tecnologia
+                    </strong>
+
+                    <span>
+                        Sensores e controle automático
+                    </span>
+
+                </div>
+
+
+                <div>
+
+                    <i class="fas fa-flask"></i>
+
+                    <strong>
+                        Ciência
+                    </strong>
+
+                    <span>
+                        Aplicação prática da Física
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Espaços reservados para imagem -->
+
+        <div class="imagem-placeholder">
+
+            <i class="fas fa-image"></i>
+
+            <h3>
+                Imagem do projeto
+            </h3>
+
+            <p>
+                Imagem 01
+            </p>
+
+        </div>
+
+
+        <div class="imagem-placeholder">
+
+            <i class="fas fa-image"></i>
+
+            <h3>
+                Sistema de aquecimento
+            </h3>
+
+            <p>
+                Imagem 02
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     ÓPTICA
+================================================== -->
+
+<section id="optica" class="secao secao-optica">
+
+    <div class="cabecalho-secao">
+
+        <span class="numero">02</span>
+
+        <div>
+
+            <span class="mini-titulo">
+                TECNOCIÊNCIA
+            </span>
+
+            <h2>
+                Óptica e o comportamento da luz
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="texto-longo">
+
+        <p>
+
+            A luz é um fenômeno natural estudado há séculos e seu
+            conhecimento foi fundamental para o desenvolvimento de
+            tecnologias como as placas solares.
+
+        </p>
+
+
+        <p>
+
+            A Câmara Escura demonstra que a luz se propaga em linha
+            reta, formando uma imagem invertida ao atravessar um
+            pequeno orifício.
+
+        </p>
+
+
+        <p>
+
+            Já o Disco de Newton mostra que a luz branca é composta
+            por diferentes cores do espectro visível.
+
+        </p>
+
+
+        <p>
+
+            Esses conhecimentos ajudam a compreender o funcionamento
+            das placas fotovoltaicas. A luz solar é formada por diferentes
+            comprimentos de onda e seus fótons carregam energia.
+
+        </p>
+
+
+        <p>
+
+            Quando atingem o material semicondutor das células solares,
+            podem fornecer energia aos elétrons, produzindo corrente
+            elétrica.
+
+        </p>
+
+
+        <p>
+
+            Assim, a Câmara Escura, o Disco de Newton e as placas
+            solares estão relacionados pelo estudo da luz. A primeira
+            demonstra como a luz se propaga, o segundo revela sua
+            composição em diferentes cores, e as placas solares mostram
+            como a energia transportada pela luz pode ser transformada
+            em eletricidade.
+
+        </p>
+
+    </div>
+
+
+    <div class="optica-destaques">
+
+        <article>
+
+            <i class="fas fa-camera"></i>
+
+            <h3>
+                Câmara Escura
+            </h3>
+
+            <p>
+
+                Demonstra a propagação retilínea da luz e a formação
+                de uma imagem invertida.
+
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <i class="fas fa-rainbow"></i>
+
+            <h3>
+                Disco de Newton
+            </h3>
+
+            <p>
+
+                Demonstra a relação entre a luz branca e as diferentes
+                cores do espectro visível.
+
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <i class="fas fa-solar-panel"></i>
+
+            <h3>
+                Placas Solares
+            </h3>
+
+            <p>
+
+                Utilizam materiais semicondutores para converter a
+                energia da radiação solar em energia elétrica.
+
+            </p>
+
+        </article>
+
+    </div>
+
+
+    <div class="principios">
+
+        <h3>
+            Princípios da Óptica Geométrica
+        </h3>
+
+
+        <div class="principios-grid">
+
+            <article>
+
+                <strong>
+                    01
+                </strong>
+
+                <h4>
+                    Propagação retilínea
+                </h4>
+
+                <p>
+
+                    Em um meio transparente e homogêneo, a luz se
+                    propaga em linha reta.
+
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <strong>
+                    02
+                </strong>
+
+                <h4>
+                    Reversibilidade
+                </h4>
+
+                <p>
+
+                    Os feixes de luz são reversíveis, podendo alterar
+                    seu sentido de propagação e seguir o mesmo caminho.
+
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <strong>
+                    03
+                </strong>
+
+                <h4>
+                    Independência
+                </h4>
+
+                <p>
+
+                    Os raios luminosos podem se cruzar sem que um
+                    altere a trajetória do outro.
+
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+
+    <div class="fenomenos">
+
+        <h3>
+            Principais fenômenos ópticos
+        </h3>
+
+
+        <div class="fenomenos-grid">
+
+            <div>
+
+                <i class="fas fa-mirror"></i>
+
+                <strong>
+                    Reflexão
+                </strong>
+
+                <span>
+                    A luz é refletida por uma superfície.
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <i class="fas fa-arrows-turn-to-dots"></i>
+
+                <strong>
+                    Refração
+                </strong>
+
+                <span>
+                    A luz passa de um meio para outro.
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <i class="fas fa-circle-half-stroke"></i>
+
+                <strong>
+                    Absorção
+                </strong>
+
+                <span>
+                    A energia da luz é absorvida pelo material.
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <i class="fas fa-sun"></i>
+
+                <strong>
+                    Radiação óptica
+                </strong>
+
+                <span>
+                    Inclui UV, luz visível e infravermelho.
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="imagens-grid">
+
+        <div class="imagem-placeholder">
+
+            <i class="fas fa-image"></i>
+
+            <h3>
+                Câmara Escura
+            </h3>
+
+            <p>
+                Imagem 01
+            </p>
+
+        </div>
+
+
+        <div class="imagem-placeholder">
+
+            <i class="fas fa-image"></i>
+
+            <h3>
+                Luz e energia solar
+            </h3>
+
+            <p>
+                Imagem 02
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     ROBÓTICA
+================================================== -->
+
+<section id="robotica" class="secao secao-robo">
+
+    <div class="cabecalho-secao">
+
+        <span class="numero">03</span>
+
+        <div>
+
+            <span class="mini-titulo">
+                AUTOMAÇÃO
+            </span>
+
+            <h2>
+                Robótica e Programação
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="texto-longo">
+
+        <p>
+
+            O sistema de aquecimento da piscina pode funcionar de forma
+            automática, utilizando sensores para medir as condições da
+            água e atuadores para realizar as ações necessárias.
+
+        </p>
+
+
+        <p>
+
+            O principal sensor seria um sensor de temperatura à prova
+            d'água. Ele ficaria em contato com a água e enviaria
+            continuamente a temperatura medida para um controlador,
+            que poderia ser um Arduino.
+
+        </p>
+
+
+        <p>
+
+            O controlador compara a temperatura da piscina com a
+            temperatura desejada, chamada de <strong>setpoint</strong>.
+
+        </p>
+
+    </div>
+
+
+    <!-- Exemplo -->
+
+    <div class="exemplo-temperatura">
+
+        <div>
+
+            <span>
+                TEMPERATURA DESEJADA
+            </span>
+
+            <strong>
+                30 °C
+            </strong>
+
+        </div>
+
+
+        <div class="sinal">
+            VS
+        </div>
+
+
+        <div>
+
+            <span>
+                TEMPERATURA MEDIDA
+            </span>
+
+            <strong>
+                27 °C
+            </strong>
+
+        </div>
+
+
+        <div class="resultado-exemplo">
+
+            <i class="fas fa-fire"></i>
+
+            <span>
+                Aquecimento necessário
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="texto-longo">
+
+        <p>
+
+            Por exemplo, se o usuário definir 30 °C e o sensor indicar
+            27 °C, o controlador identifica que a água precisa ser
+            aquecida.
+
+        </p>
+
+
+        <p>
+
+            Então, ele envia um sinal para um relé, que funciona como
+            um interruptor controlado eletronicamente e aciona o
+            equipamento de aquecimento.
+
+        </p>
+
+
+        <p>
+
+            Além do aquecedor, uma bomba de circulação pode ser utilizada
+            como atuador. Ela movimenta a água, fazendo com que a água
+            aquecida seja distribuída pela piscina.
+
+        </p>
+
+
+        <p>
+
+            Quando a água atingir a temperatura programada, o controlador
+            pode desligar o aquecedor. O sensor continua realizando novas
+            medições e, caso a temperatura volte a cair, o sistema pode
+            ligar novamente o aquecimento.
+
+        </p>
+
+
+        <p>
+
+            Assim, forma-se um <strong>sistema de controle em malha
+            fechada</strong>, no qual o sensor fornece informações
+            constantemente e o controlador utiliza essas informações
+            para decidir quando os atuadores devem funcionar.
+
+        </p>
+
+    </div>
+
+
+    <!-- Fluxograma -->
+
+    <div class="fluxograma">
+
+        <h3>
+            Fluxo de funcionamento
+        </h3>
+
+
+        <div class="fluxo">
+
+            <div class="fluxo-item sensor">
+
+                <i class="fas fa-temperature-half"></i>
+
+                <strong>
+                    Sensor
+                </strong>
+
+                <span>
+                    Mede a temperatura
+                </span>
+
+            </div>
+
+
+            <i class="fas fa-arrow-right seta"></i>
+
+
+            <div class="fluxo-item controlador">
+
+                <i class="fas fa-microchip"></i>
+
+                <strong>
+                    Arduino
+                </strong>
+
+                <span>
+                    Analisa os dados
+                </span>
+
+            </div>
+
+
+            <i class="fas fa-arrow-right seta"></i>
+
+
+            <div class="fluxo-item rele">
+
+                <i class="fas fa-toggle-on"></i>
+
+                <strong>
+                    Relé
+                </strong>
+
+                <span>
+                    Controla o equipamento
+                </span>
+
+            </div>
+
+
+            <i class="fas fa-arrow-right seta"></i>
+
+
+            <div class="fluxo-item bomba">
+
+                <i class="fas fa-water"></i>
+
+                <strong>
+                    Bomba
+                </strong>
+
+                <span>
+                    Circula a água
+                </span>
+
+            </div>
+
+
+            <i class="fas fa-arrow-right seta"></i>
+
+
+            <div class="fluxo-item piscina">
+
+                <i class="fas fa-person-swimming"></i>
+
+                <strong>
+                    Piscina
+                </strong>
+
+                <span>
+                    Água aquecida
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="imagens-grid">
+
+        <div class="imagem-placeholder">
+
+            <i class="fas fa-image"></i>
+
+            <h3>
+                Sensor e Arduino
+            </h3>
+
+            <p>
+                Imagem 01
+            </p>
+
+        </div>
+
+
+        <div class="imagem-placeholder">
+
+            <i class="fas fa-image"></i>
+
+            <h3>
+                Sistema automatizado
+            </h3>
+
+            <p>
+                Imagem 02
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     ACESSIBILIDADE
+================================================== -->
+
+<section id="acessibilidade" class="secao secao-verde">
+
+    <div class="cabecalho-secao">
+
+        <span class="numero">04</span>
+
+        <div>
+
+            <span class="mini-titulo">
+                INCLUSÃO
+            </span>
+
+            <h2>
+                Acessibilidade Digital
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="acessibilidade-intro">
+
+        <i class="fas fa-universal-access"></i>
+
+        <div>
+
+            <h3>
+                Um projeto para todos
+            </h3>
+
+            <p>
+
+                A acessibilidade digital busca garantir que pessoas com
+                diferentes necessidades possam acessar, compreender e
+                utilizar o conteúdo do site.
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="acessibilidade-grid">
+
+        <article>
+
+            <i class="fas fa-eye"></i>
+
+            <h3>
+                Contraste
+            </h3>
+
+            <p>
+                Cores e textos foram escolhidos para facilitar a leitura.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <i class="fas fa-keyboard"></i>
+
+            <h3>
+                Navegação
+            </h3>
+
+            <p>
+                Os elementos podem ser acessados utilizando o teclado.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <i class="fas fa-font"></i>
+
+            <h3>
+                Textos legíveis
+            </h3>
+
+            <p>
+                O tamanho e o espaçamento dos textos favorecem a leitura.
+            </p>
+
+        </article>
+
+
+        <article>
+
+            <i class="fas fa-image"></i>
+
+            <h3>
+                Texto alternativo
+            </h3>
+
+            <p>
+                As imagens terão descrições alternativas para leitores de tela.
+            </p>
+
+        </article>
+
+    </div>
+
+
+    <div class="imagens-grid">
+
+        <div class="imagem-placeholder">
+
+            <i class="fas fa-image"></i>
+
+            <h3>
+                Acessibilidade
+            </h3>
+
+            <p>
+                Imagem 01
+            </p>
+
+        </div>
+
+
+        <div class="imagem-placeholder">
+
+            <i class="fas fa-image"></i>
+
+            <h3>
+                Inclusão
+            </h3>
+
+            <p>
+                Imagem 02
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     SIMULADOR
+================================================== -->
+
+<section id="simulador" class="secao secao-simulador">
+
+    <div class="cabecalho-secao">
+
+        <span class="numero">05</span>
+
+        <div>
+
+            <span class="mini-titulo">
+                INTERATIVIDADE
+            </span>
+
+            <h2>
+                Simulador do Sistema
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <p class="centralizado">
+
+        Esta simulação representa, de forma educativa, como o sistema
+        poderia reagir às mudanças de temperatura da água.
+
+    </p>
+
+
+    <div class="simulador">
+
+        <div class="controle">
+
+            <label for="temperatura">
+                Temperatura atual:
+            </label>
+
+
+            <div class="temperatura-valor">
+
+                <span id="temperaturaValor">
+                    27
+                </span>
+
+                °C
+
+            </div>
+
+
+            <input
+                type="range"
+                id="temperatura"
+                min="15"
+                max="35"
+                value="27"
+                aria-label="Temperatura atual da piscina"
+            >
+
+
+            <label for="setpoint">
+                Temperatura desejada:
+            </label>
+
+
+            <select id="setpoint">
+
+                <option value="28">
+                    28 °C
+                </option>
+
+                <option value="29">
+                    29 °C
+                </option>
+
+                <option value="30" selected>
+                    30 °C
+                </option>
+
+                <option value="31">
+                    31 °C
+                </option>
+
+                <option value="32">
+                    32 °C
+                </option>
+
+            </select>
+
+
+            <button
+                id="simular"
+                class="botao botao-simulador"
+            >
+
+                <i class="fas fa-play"></i>
+
+                Simular sistema
+
+            </button>
+
+        </div>
+
+
+        <div class="painel-simulador">
+
+            <div
+                id="iconeStatus"
+                class="status-icone"
+            >
+
+                <i class="fas fa-temperature-half"></i>
+
+            </div>
+
+
+            <h3 id="statusTitulo">
+                Sistema aguardando
+            </h3>
+
+
+            <p id="statusTexto">
+
+                Ajuste os valores e clique em
+                "Simular sistema".
+
+            </p>
+
+
+            <div class="status-indicadores">
+
+                <div>
+
+                    <span>
+                        AQUECEDOR
+                    </span>
+
+                    <strong id="statusAquecedor">
+                        DESLIGADO
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        BOMBA
+                    </span>
+
+                    <strong id="statusBomba">
+                        DESLIGADA
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     MODELO 3D
+================================================== -->
+
+<section id="modelo3d" class="secao secao-3d">
+
+    <div class="cabecalho-secao">
+
+        <span class="numero">06</span>
+
+        <div>
+
+            <span class="mini-titulo">
+                PROTÓTIPO
+            </span>
+
+            <h2>
+                Modelo 3D do Sistema
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <p class="centralizado">
+
+        Modelo conceitual do sistema de aquecimento e circulação
+        da água. A representação não substitui o dimensionamento
+        técnico necessário para uma instalação real.
+
+    </p>
+
+
+    <div class="modelo">
+
+        <!-- Sol -->
+
+        <div class="modelo-sol">
+
+            <i class="fas fa-sun"></i>
+
+        </div>
+
+
+        <!-- Coletor -->
+
+        <div class="coletor">
+
+            <div class="coletor-titulo">
+                COLETOR SOLAR
+            </div>
+
+
+            <div class="painel-celulas">
+
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Tubo superior -->
+
+        <div class="tubo tubo-superior"></div>
+
+
+        <!-- Bomba -->
+
+        <div class="bomba-3d">
+
+            <i class="fas fa-fan"></i>
+
+            <span>
+                BOMBA
+            </span>
+
+        </div>
+
+
+        <!-- Tubo inferior -->
+
+        <div class="tubo tubo-inferior"></div>
+
+
+        <!-- Piscina -->
+
+        <div class="piscina-3d">
+
+            <div class="agua">
+
+                <div class="onda3d onda-a"></div>
+                <div class="onda3d onda-b"></div>
+                <div class="onda3d onda-c"></div>
+
+            </div>
+
+
+            <span>
+                PISCINA
+            </span>
+
+        </div>
+
+
+        <!-- Fluxo -->
+
+        <div class="particula part1"></div>
+        <div class="particula part2"></div>
+        <div class="particula part3"></div>
+
+    </div>
+
+
+    <button
+        id="iniciar3D"
+        class="botao botao-3d"
+    >
+
+        <i class="fas fa-play"></i>
+
+        Iniciar sistema
+
+    </button>
+
+
+    <p
+        id="mensagem3D"
+        class="mensagem-3d"
+    >
+        Clique para iniciar a demonstração.
+    </p>
+
+</section>
+
+
+</main>
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    <div class="footer-conteudo">
+
+        <div>
+
+            <h2>
+                Piscina Sustentável
+            </h2>
+
+            <p>
+                Ciência, tecnologia e inclusão.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <span>
+                PROJETO ESCOLAR
+            </span>
+
+            <p>
+                HTML • CSS • JavaScript
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-final">
+
+        <p>
+            Projeto desenvolvido para fins educacionais.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
