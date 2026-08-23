@@ -1068,15 +1068,20 @@ a {
 
 
 /* =====================================================
-   RODAPÉ
+   NOVO RODAPÉ
 ===================================================== */
 
 footer {
-    background: #294e80;
+    background:
+        linear-gradient(
+            135deg,
+            #294e80,
+            #203d66
+        );
 
     color: white;
 
-    padding: 50px 6% 20px;
+    padding: 65px 6% 25px;
 }
 
 .footer-content {
@@ -1086,50 +1091,120 @@ footer {
     display: grid;
 
     grid-template-columns:
-        2fr 1fr;
+        2fr 1fr 1fr;
 
-    gap: 40px;
+    gap: 50px;
 }
 
-.footer-content h3 {
-    margin-bottom: 10px;
+.footer-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 18px;
+
+    font-size: 1.4rem;
+
+    font-weight: 800;
 }
 
-.footer-content h4 {
-    margin-bottom: 12px;
+.footer-logo i {
+    color: #fdff87;
+
+    font-size: 1.8rem;
 }
 
-.footer-content a {
+.footer-main p {
+    max-width: 500px;
+
+    opacity: .85;
+
+    line-height: 1.7;
+}
+
+.footer-links h3,
+.footer-info h3 {
+    margin-bottom: 16px;
+
+    color: #fdff87;
+}
+
+.footer-links a {
     display: block;
 
     color: white;
 
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 
-    opacity: .9;
+    opacity: .85;
+
+    transition: .25s;
 }
 
-.footer-content a:hover {
+.footer-links a:hover {
     color: #fdff87;
+
+    transform: translateX(4px);
 }
 
-.copyright {
+.footer-info p {
+    margin-bottom: 7px;
+
+    opacity: .8;
+}
+
+footer .copyright {
     width: min(1100px, 100%);
 
-    margin: 40px auto 0;
+    margin: 45px auto 0;
 
     padding-top: 20px;
 
     border-top:
         1px solid rgba(255,255,255,.2);
 
-    text-align: center;
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
 
     font-size: .85rem;
 
-    opacity: .8;
+    opacity: .75;
 }
 
+@media (max-width: 750px) {
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-main {
+        grid-column: 1 / -1;
+    }
+
+    footer .copyright {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-main {
+        grid-column: auto;
+    }
+
+}
 
 /* =====================================================
    BOTÃO TOPO
