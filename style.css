@@ -75,17 +75,25 @@ a {
    CABEÇALHO
 ===================================================== */
 
-.header {
+header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
 
-    background: rgba(41, 78, 128, 0.96);
+    /* Efeito vidro azul */
+    background: rgba(41, 78, 128, 0.72);
+
+    /* Desfoque do que está atrás */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+
+    /* Borda sutil */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
 
     box-shadow:
-        0 4px 18px rgba(0, 0, 0, 0.12);
+        0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
 .navbar {
@@ -101,15 +109,19 @@ a {
 
 .logo {
     color: white;
-    font-size: 1.35rem;
+
+    font-size: 1.15rem;
     font-weight: 800;
 
     display: flex;
     align-items: center;
     gap: 10px;
+
+    line-height: 1.2;
 }
 
 .logo i {
+    color: #fdff87;
     font-size: 1.4rem;
 }
 
