@@ -1623,3 +1623,33 @@ footer .copyright {
 
 }
 
+
+/* =====================================================
+   MODELO 3D — CONFIGURAÇÃO EXCLUSIVA
+===================================================== */
+
+.modelo-3d-imagem {
+    width: min(850px, 100%);
+    margin: 0 auto;
+
+    padding: 10px;
+
+    background: #ffffff;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 25px rgba(41, 78, 128, 0.12);
+
+    overflow: hidden;
+}
+
+.modelo-3d-imagem img {
+    width: 100%;
+    height: 330px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+}
+
