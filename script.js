@@ -90,31 +90,19 @@ topBtn.addEventListener("click", () => {
 
 });
 
-
 /* =====================================================
    SIMULADOR
 ===================================================== */
 
-const simularBtn =
-    document.getElementById("simularBtn");
+const simularBtn = document.getElementById("simularBtn");
 
-const tempAtual =
-    document.getElementById("tempAtual");
+const tempAtual = document.getElementById("tempAtual");
+const tempDesejada = document.getElementById("tempDesejada");
+const sol = document.getElementById("sol");
 
-const tempDesejada =
-    document.getElementById("tempDesejada");
-
-const sol =
-    document.getElementById("sol");
-
-const diferenca =
-    document.getElementById("diferenca");
-
-const tempo =
-    document.getElementById("tempo");
-
-const porcentagem =
-    document.getElementById("porcentagem");
+const diferenca = document.getElementById("diferenca");
+const tempo = document.getElementById("tempo");
+const porcentagem = document.getElementById("porcentagem");
 
 const barraProgresso =
     document.getElementById("barraProgresso");
@@ -122,67 +110,20 @@ const barraProgresso =
 const statusSistema =
     document.getElementById("statusSistema");
 
-
-/*
-    Simulador didático.
-
-    Ele representa a lógica:
-
-    SENSOR
-       ↓
-    CONTROLADOR
-       ↓
-    DECISÃO
-       ↓
-    AQUECIMENTO / BOMBA
-
-    Os valores não representam o dimensionamento
-    real de uma piscina.
-*/
+const explicacao =
+    document.getElementById("explicacao");
 
 
 function executarSimulacao() {
 
-    /* =================================================
-       VERIFICAÇÃO DOS ELEMENTOS
-    ================================================= */
-
-    if (
-        !tempAtual ||
-        !tempDesejada ||
-        !sol ||
-        !diferenca ||
-        !tempo ||
-        !porcentagem ||
-        !barraProgresso ||
-        !statusSistema ||
-    ) {
-
-        console.error(
-            "Elementos do simulador não foram encontrados no HTML."
-        );
-
-        return;
-    }
+    const atual = Number(tempAtual.value);
+    const desejada = Number(tempDesejada.value);
+    const intensidadeSolar = Number(sol.value);
 
 
-    /* =================================================
-       PEGAR VALORES
-    ================================================= */
-
-    const atual =
-        Number(tempAtual.value);
-
-    const desejada =
-        Number(tempDesejada.value);
-
-    const intensidadeSolar =
-        Number(sol.value);
-
-
-    /* =================================================
+    /* ===============================
        VALIDAÇÃO
-    ================================================= */
+    =============================== */
 
     if (
         !Number.isFinite(atual) ||
@@ -218,32 +159,27 @@ function executarSimulacao() {
     }
 
 
-    /* =================================================
+    /* ===============================
        DIFERENÇA DE TEMPERATURA
-    ================================================= */
+    =============================== */
 
-    const delta =
-        desejada - atual;
-
+    const delta = desejada - atual;
 
     diferenca.textContent =
         `${delta.toFixed(1)} °C`;
 
 
-    /* =================================================
-       TEMPERATURA JÁ ATINGIDA
-    ================================================= */
+    /* ===============================
+       TEMPERATURA ATINGIDA
+    =============================== */
 
     if (delta <= 0) {
 
-        tempo.textContent =
-            "0 h";
+        tempo.textContent = "0 h";
 
-        porcentagem.textContent =
-            "0%";
+        porcentagem.textContent = "0%";
 
-        barraProgresso.style.width =
-            "0%";
+        barraProgresso.style.width = "0%";
 
 
         statusSistema.innerHTML =
@@ -251,18 +187,18 @@ function executarSimulacao() {
             'Temperatura atingida! O aquecimento pode permanecer desligado.';
 
 
-       
+        explicacao.innerHTML = "";
+
         return;
     }
 
 
-    /* =================================================
+    /* ===============================
        NECESSIDADE DE AQUECIMENTO
-    ================================================= */
+    =============================== */
 
     let necessidade =
         (delta / 10) * 100;
-
 
     necessidade =
         Math.max(
@@ -274,22 +210,12 @@ function executarSimulacao() {
         );
 
 
-    /* =================================================
+    /* ===============================
        CONTRIBUIÇÃO SOLAR
-    ================================================= */
-
-    /*
-       O valor escolhido no campo "Intensidade solar"
-       varia de 0 a 1.
-
-       Aqui usamos esse valor apenas para criar
-       uma representação visual da contribuição
-       da energia solar.
-    */
+    =============================== */
 
     const contribuicaoSolar =
         intensidadeSolar * 0.35;
-
 
     const necessidadeComplementar =
         Math.max(
@@ -298,27 +224,15 @@ function executarSimulacao() {
         );
 
 
-    /* =================================================
+    /* ===============================
        TEMPO ESTIMADO
-    ================================================= */
-
-    /*
-       Modelo didático:
-
-       Quanto maior a diferença de temperatura,
-       maior será o tempo estimado.
-
-       A intensidade solar reduz um pouco
-       esse tempo no modelo.
-    */
+    =============================== */
 
     let tempoEstimado =
         delta * 0.35;
 
-
     tempoEstimado *=
         (1 - intensidadeSolar * 0.25);
-
 
     tempoEstimado =
         Math.max(
@@ -331,68 +245,33 @@ function executarSimulacao() {
         `${tempoEstimado.toFixed(1)} h`;
 
 
-    /* =================================================
-       BARRA DE NECESSIDADE
-    ================================================= */
+    /* ===============================
+       BARRA DE AQUECIMENTO
+    =============================== */
 
     porcentagem.textContent =
         `${Math.round(necessidadeComplementar)}%`;
 
-
     barraProgresso.style.width =
         `${necessidadeComplementar}%`;
 
-
-    /* =================================================
-       TEXTO SOBRE A INTENSIDADE SOLAR
-    ================================================= */
-
-    let textoSol;
-
-
-    if (intensidadeSolar === 0) {
-
-        textoSol =
-            "sem contribuição solar significativa";
-
-    }
-
-    else if (intensidadeSolar <= 0.3) {
-
-        textoSol =
-            "com baixa contribuição solar";
-
-    }
-
-    else if (intensidadeSolar <= 0.6) {
-
-        textoSol =
-            "com contribuição solar moderada";
-
-    }
-
-    else if (intensidadeSolar <= 0.8) {
-
-        textoSol =
-            "com boa contribuição solar";
-
-    }
-
-    else {
-
-        textoSol =
-            "com alta contribuição solar";
-
-    }
-
-
-    /* =================================================
-       STATUS DO SISTEMA
-    ================================================= */
+    /* ===============================
+       STATUS
+    =============================== */
 
     statusSistema.innerHTML =
         '<i class="fa-solid fa-fire"></i> ' +
         'Aquecimento necessário. O controlador pode acionar o sistema.';
+
+
+    /* ===============================
+       EXPLICAÇÃO
+    =============================== */
+
+    explicacao.innerHTML = "";
+
+       
+}
 
 
 /* =====================================================
