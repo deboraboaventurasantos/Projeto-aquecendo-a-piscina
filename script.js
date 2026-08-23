@@ -2,7 +2,7 @@
    MENU MOBILE
 ===================================================== */
 
-const menuBtn = document.getElementById("menuBtn");
+const menuBtn = document.getElementById("menu-btn");
 const menu = document.getElementById("menu");
 
 if (menuBtn && menu) {
@@ -52,7 +52,14 @@ if (menuBtn && menu) {
    BOTÃO VOLTAR AO TOPO
 ===================================================== */
 
-const topBtn = document.getElementById("topBtn");
+const topBtn = document.createElement("button");
+
+topBtn.id = "topBtn";
+topBtn.className = "top-btn";
+topBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+topBtn.setAttribute("aria-label", "Voltar ao topo");
+
+document.body.appendChild(topBtn);
 
 window.addEventListener("scroll", () => {
 
