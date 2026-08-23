@@ -993,12 +993,7 @@ header {
 ===================================================== */
 
 footer {
-    background:
-        linear-gradient(
-            135deg,
-            #294e80,
-            #203d66
-        );
+    background: #4f78a8
 
     color: white;
 
