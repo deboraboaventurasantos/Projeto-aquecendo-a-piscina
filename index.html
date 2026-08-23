@@ -8,1030 +8,1233 @@
           content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-          content="Projeto escolar de aquecimento sustentável da piscina, integrando Física, Óptica, Robótica, Programação e Inclusão.">
+          content="Projeto escolar sobre o aquecimento sustentável da piscina do CEP utilizando conceitos de óptica, robótica, programação e inclusão.">
 
-    <title>Aquecimento Sustentável da Piscina</title>
+    <title>Aquecimento Sustentável da Piscina | CEP</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <!-- Ícones -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         CABEÇALHO
-    ========================== -->
+<!-- =====================================================
+     CABEÇALHO
+===================================================== -->
 
-    <header>
+<header class="header">
 
-        <nav class="navbar">
+    <nav class="navbar" aria-label="Navegação principal">
 
-            <a href="#inicio" class="logo">
-                <i class="fa-solid fa-water"></i>
-                Projeto Piscina
-            </a>
+        <a href="#inicio" class="logo">
+            <i class="fa-solid fa-water"></i>
+            Projeto Piscina
+        </a>
 
-            <button
-                class="menu-btn"
-                id="menu-btn"
-                aria-label="Abrir menu"
-                aria-expanded="false">
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Abrir menu"
+            aria-expanded="false">
 
-                <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-bars"></i>
 
-            </button>
+        </button>
 
-            <ul class="menu" id="menu">
+        <ul class="menu" id="menu">
+
+            <li>
+                <a href="#inicio">Início</a>
+            </li>
+
+            <li>
+                <a href="#projeto">Projeto</a>
+            </li>
+
+            <li>
+                <a href="#optica">Óptica</a>
+            </li>
+
+            <li>
+                <a href="#robotica">Robótica</a>
+            </li>
+
+            <li>
+                <a href="#inclusao">Inclusão</a>
+            </li>
+
+            <li>
+                <a href="#modelo3d">Modelo 3D</a>
+            </li>
+
+            <li>
+                <a href="#simulador">Simulador</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+<!-- =====================================================
+     INÍCIO
+     NÃO ALTERADO NA PROPOSTA VISUAL
+===================================================== -->
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            <i class="fa-solid fa-solar-panel"></i>
+            Ciência • Tecnologia • Sustentabilidade
+        </span>
+
+        <h1>
+            Aquecimento Sustentável
+            da Piscina do CEP
+        </h1>
+
+        <p>
+            Uma proposta que une Física, Óptica, Robótica e
+            Programação para tornar a piscina escolar mais
+            confortável, eficiente e acessível.
+        </p>
+
+        <a href="#projeto" class="hero-btn">
+            Conheça o projeto
+            <i class="fa-solid fa-arrow-down"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROJETO
+===================================================== -->
+
+<section class="section section-projeto" id="projeto">
+
+    <div class="section-title">
+
+        <span class="section-label">
+            NOSSA PROPOSTA
+        </span>
+
+        <h2>
+            Aquecimento da piscina
+        </h2>
+
+        <p>
+            O projeto propõe um sistema de aquecimento que
+            aproveita conhecimentos científicos e tecnológicos
+            para melhorar as condições de utilização da piscina
+            do colégio.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <article class="card projeto-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-sun"></i>
+            </div>
+
+            <h3>
+                Aproveitamento da energia solar
+            </h3>
+
+            <p>
+                A energia proveniente do Sol pode ser aproveitada
+                por coletores solares para contribuir com o
+                aquecimento da água. Dessa forma, o projeto
+                relaciona a utilização de uma fonte renovável
+                com a necessidade de conforto térmico.
+            </p>
+
+        </article>
+
+
+        <article class="card projeto-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-temperature-half"></i>
+            </div>
+
+            <h3>
+                Controle da temperatura
+            </h3>
+
+            <p>
+                Sensores podem acompanhar continuamente a
+                temperatura da água. Um controlador compara
+                o valor medido com a temperatura desejada e
+                decide quando o sistema de aquecimento deve
+                funcionar.
+            </p>
+
+        </article>
+
+
+        <article class="card projeto-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+
+            <h3>
+                Sustentabilidade
+            </h3>
+
+            <p>
+                Além de buscar melhorar o conforto durante as
+                atividades escolares, a proposta incentiva o
+                uso consciente da energia e demonstra como
+                tecnologias sustentáveis podem ser aplicadas
+                em espaços educacionais.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ÓPTICA
+===================================================== -->
+
+<section class="section optica-section" id="optica">
+
+    <div class="section-title light-title">
+
+        <span class="section-label">
+            FÍSICA
+        </span>
+
+        <h2>
+            Óptica e o comportamento da luz
+        </h2>
+
+        <p>
+            A óptica é fundamental para compreender como a
+            radiação solar pode ser aproveitada em um sistema
+            de aquecimento.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <article class="card optica-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <h3>
+                O comportamento da luz
+            </h3>
+
+            <p>
+                A luz é um fenômeno natural estudado há séculos
+                e seu conhecimento foi fundamental para o
+                desenvolvimento de tecnologias como câmeras,
+                lentes, telescópios e sistemas solares.
+            </p>
+
+            <p>
+                A câmara escura demonstra o princípio da
+                propagação retilínea da luz. Quando os raios
+                atravessam um pequeno orifício, uma imagem
+                invertida pode ser formada no interior da caixa.
+            </p>
+
+            <p>
+                Já o Disco de Newton permite observar que a luz
+                branca pode ser decomposta em diferentes cores
+                do espectro visível.
+            </p>
+
+        </article>
+
+
+        <article class="card optica-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </div>
+
+            <h3>
+                Óptica geométrica
+            </h3>
+
+            <p>
+                A óptica pode ser estudada por diferentes
+                perspectivas. A óptica geométrica considera
+                a luz como raios que permitem representar
+                graficamente sua trajetória.
+            </p>
+
+            <ul class="science-list">
 
                 <li>
-                    <a href="#inicio">Início</a>
+                    <strong>Propagação retilínea:</strong>
+                    em meios transparentes e homogêneos,
+                    a luz se propaga em linha reta.
                 </li>
 
                 <li>
-                    <a href="#projeto">Projeto</a>
+                    <strong>Reversibilidade:</strong>
+                    o caminho de um raio luminoso pode ser
+                    percorrido no sentido contrário.
                 </li>
 
                 <li>
-                    <a href="#optica">Óptica</a>
-                </li>
-
-                <li>
-                    <a href="#robotica">Robótica</a>
-                </li>
-
-                <li>
-                    <a href="#inclusao">Inclusão</a>
-                </li>
-
-                <li>
-                    <a href="#simulador">Simulador</a>
-                </li>
-
-                <li>
-                    <a href="#projeto-3d">Projeto 3D</a>
+                    <strong>Independência:</strong>
+                    raios de luz podem se cruzar sem que
+                    um altere a trajetória do outro.
                 </li>
 
             </ul>
 
-        </nav>
-
-    </header>
+        </article>
 
 
-    <main>
+        <article class="card optica-card">
 
-        <!-- =========================
-             INÍCIO
-        ========================== -->
-
-        <section id="inicio" class="hero">
-
-            <div class="hero-content">
-
-                <span class="tag">
-
-                    <i class="fa-solid fa-sun"></i>
-
-                    Ciência, tecnologia e sustentabilidade
-
-                </span>
-
-
-                <h1>
-                    Aquecimento Sustentável
-                    da Piscina
-                </h1>
-
-
-                <p>
-
-                    Uma proposta que une conhecimentos de Física,
-                    Óptica, Robótica e Programação para desenvolver
-                    uma solução de aquecimento mais eficiente,
-                    sustentável e inclusiva para a piscina do colégio.
-
-                </p>
-
-
-                <a href="#projeto" class="btn">
-
-                    Conheça o projeto
-
-                    <i class="fa-solid fa-arrow-down"></i>
-
-                </a>
-
-            </div>
-
-
-            <div class="hero-decoration">
-
+            <div class="card-icon">
                 <i class="fa-solid fa-sun"></i>
-
-                <i class="fa-solid fa-water"></i>
-
             </div>
 
-        </section>
+            <h3>
+                Luz e energia solar
+            </h3>
+
+            <p>
+                A radiação solar transporta energia. Quando
+                essa radiação atinge uma superfície, parte
+                pode ser refletida, parte absorvida e, dependendo
+                do material e do sistema, parte pode ser
+                transmitida.
+            </p>
+
+            <p>
+                Em coletores solares térmicos, o objetivo é
+                aproveitar principalmente a energia absorvida
+                para elevar a temperatura de um fluido ou
+                diretamente da água.
+            </p>
+
+            <p>
+                Por isso, a escolha dos materiais e das cores
+                da superfície coletora influencia o
+                aproveitamento da radiação.
+            </p>
+
+        </article>
 
 
+        <article class="card optica-card">
 
-        <!-- =========================
-             PROJETO
-        ========================== -->
-
-        <section id="projeto" class="section projeto">
-
-            <div class="section-title">
-
-                <span>01 — PROPOSTA</span>
-
-                <h2>
-                    O projeto de aquecimento
-                </h2>
-
-                <p>
-
-                    Uma proposta para utilizar energia solar,
-                    tecnologia e automação no aquecimento da
-                    piscina do colégio.
-
-                </p>
-
+            <div class="card-icon">
+                <i class="fa-solid fa-arrows-to-circle"></i>
             </div>
 
-
-            <div class="content-grid">
-
-                <div class="text-content">
-
-                    <h3>
-
-                        <i class="fa-solid fa-lightbulb"></i>
-
-                        Uma solução sustentável
-
-                    </h3>
-
-
-                    <p>
-
-                        O projeto propõe o desenvolvimento de um
-                        sistema de aquecimento para a piscina do
-                        colégio utilizando conceitos de energia
-                        solar, Física, Robótica e Programação.
-
-                    </p>
-
-
-                    <p>
-
-                        A energia proveniente do Sol pode ser
-                        aproveitada por coletores ou placas solares.
-                        A radiação solar incide sobre os materiais
-                        e parte dessa energia pode ser transformada
-                        em energia térmica ou elétrica.
-
-                    </p>
-
-
-                    <p>
-
-                        A água da piscina pode ser movimentada por
-                        uma bomba de circulação, permitindo que a
-                        água aquecida seja distribuída pelo sistema.
-
-                    </p>
-
-
-                    <p>
-
-                        Além disso, sensores podem acompanhar
-                        continuamente a temperatura da água.
-                        Um controlador pode analisar essas informações
-                        e decidir quando o sistema deve ser ligado
-                        ou desligado.
-
-                    </p>
-
-
-                    <p>
-
-                        Dessa forma, o projeto integra conhecimentos
-                        de diferentes áreas para propor uma solução
-                        tecnológica voltada ao ambiente escolar.
-
-                    </p>
-
-                </div>
-
-
-                <!-- IMAGENS SOMENTE AQUI -->
-
-                <div class="image-grid">
-
-                    <figure class="image-card">
-
-                        <img
-                            src="assets/projeto1.jpg"
-                            alt="Representação de um sistema de aquecimento solar para piscina">
-
-                        <figcaption>
-                            Sistema de aquecimento solar
-                        </figcaption>
-
-                    </figure>
-
-
-                    <figure class="image-card">
-
-                        <img
-                            src="assets/projeto2.jpg"
-                            alt="Representação de uma piscina utilizando energia solar">
-
-                        <figcaption>
-                            Aproveitamento da energia solar
-                        </figcaption>
-
-                    </figure>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             ÓPTICA
-        ========================== -->
-
-        <section id="optica" class="section optica">
-
-            <div class="section-title">
-
-                <span>02 — FÍSICA</span>
-
-                <h2>
-                    Óptica aplicada ao projeto
-                </h2>
-
-                <p>
-
-                    O estudo da luz permite compreender diversos
-                    fenômenos envolvidos no aproveitamento da
-                    radiação solar.
-
-                </p>
-
-            </div>
-
-
-            <div class="content-wide">
-
-                <h3>
-
-                    <i class="fa-solid fa-sun"></i>
-
-                    O comportamento da luz
-
-                </h3>
-
-
-                <p>
-
-                    A luz é um fenômeno natural estudado há séculos
-                    e seu conhecimento foi fundamental para o
-                    desenvolvimento de tecnologias como câmeras,
-                    lentes, telescópios, microscópios e placas solares.
-
-                </p>
-
-
-                <p>
-
-                    A Câmara Escura demonstra que a luz se propaga
-                    em linha reta. Quando os raios luminosos passam
-                    por uma pequena abertura, uma imagem invertida
-                    pode ser formada no interior da câmara.
-
-                </p>
-
-
-                <p>
-
-                    O Disco de Newton demonstra que a luz branca
-                    pode ser decomposta em diferentes cores do
-                    espectro visível.
-
-                </p>
-
-
-                <p>
-
-                    Nas células fotovoltaicas, a radiação solar
-                    transporta energia. Os fótons podem interagir
-                    com materiais semicondutores e fornecer energia
-                    aos elétrons, permitindo a produção de corrente
-                    elétrica.
-
-                </p>
-
-
-                <p>
-
-                    Esses conceitos mostram como o estudo da luz
-                    está diretamente relacionado ao desenvolvimento
-                    de tecnologias capazes de aproveitar a energia
-                    proveniente do Sol.
-
-                </p>
-
-            </div>
-
-
-
-            <!-- FENÔMENOS ÓPTICOS -->
+            <h3>
+                Fenômenos ópticos
+            </h3>
+
+            <p>
+                Os fenômenos ópticos ajudam a explicar o
+                comportamento da radiação quando ela encontra
+                diferentes materiais.
+            </p>
 
             <div class="phenomena">
 
-                <div class="section-title">
-
-                    <span>FENÔMENOS ÓPTICOS</span>
-
-                    <h2>
-                        Como a luz interage com a matéria
-                    </h2>
-
-                </div>
-
-
-                <div class="phenomena-grid">
-
-
-                    <article>
-
-                        <i class="fa-solid fa-arrow-right"></i>
-
-                        <h3>
-                            Reflexão
-                        </h3>
-
-                        <p>
-
-                            A reflexão acontece quando a luz encontra
-                            uma superfície e retorna ao meio de origem.
-                            Esse fenômeno pode ser observado em
-                            diferentes materiais e pode influenciar
-                            a maneira como a radiação solar é
-                            direcionada.
-
-                        </p>
-
-                    </article>
-
-
-
-                    <article>
-
-                        <i class="fa-solid fa-right-left"></i>
-
-                        <h3>
-                            Refração
-                        </h3>
-
-                        <p>
-
-                            A refração acontece quando a luz passa
-                            de um meio transparente para outro,
-                            podendo ocorrer mudança na velocidade
-                            e na direção de propagação da luz.
-
-                        </p>
-
-                    </article>
-
-
-
-                    <article>
-
-                        <i class="fa-solid fa-circle-half-stroke"></i>
-
-                        <h3>
-                            Absorção
-                        </h3>
-
-                        <p>
-
-                            A absorção ocorre quando parte da energia
-                            da radiação luminosa é absorvida por um
-                            material. Essa energia pode ser transformada
-                            em energia térmica.
-
-                        </p>
-
-                    </article>
-
-
-
-                    <article>
-
-                        <i class="fa-solid fa-wave-square"></i>
-
-                        <h3>
-                            Radiação óptica
-                        </h3>
-
-                        <p>
-
-                            A radiação óptica corresponde a uma região
-                            do espectro eletromagnético que inclui
-                            radiação ultravioleta, luz visível e
-                            infravermelho.
-
-                        </p>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- CONCEITOS DA ÓPTICA -->
-
-            <div class="optica-concepts">
-
-                <h3>
-                    Conceitos da Óptica Geométrica
-                </h3>
-
-
-                <div class="concept-list">
-
-
-                    <div>
-
-                        <strong>
-                            Propagação retilínea
-                        </strong>
-
-                        <p>
-
-                            Em um meio transparente e homogêneo,
-                            a luz se propaga em linha reta.
-
-                        </p>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <strong>
-                            Reversibilidade
-                        </strong>
-
-                        <p>
-
-                            O caminho percorrido por um raio luminoso
-                            pode ser realizado no sentido contrário.
-
-                        </p>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <strong>
-                            Independência dos raios
-                        </strong>
-
-                        <p>
-
-                            Raios luminosos podem se cruzar sem que
-                            suas trajetórias sejam alteradas.
-
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             ROBÓTICA
-        ========================== -->
-
-        <section id="robotica" class="section robotica">
-
-            <div class="section-title">
-
-                <span>03 — TECNOLOGIA</span>
-
-                <h2>
-                    Robótica e Programação
-                </h2>
-
-                <p>
-
-                    Sensores, controladores e atuadores podem trabalhar
-                    juntos para automatizar o funcionamento do
-                    sistema de aquecimento.
-
-                </p>
-
-            </div>
-
-
-            <div class="content-wide">
-
-                <h3>
-
-                    <i class="fa-solid fa-microchip"></i>
-
-                    Controle automático da piscina
-
-                </h3>
-
-
-                <p>
-
-                    O sistema pode utilizar um sensor de temperatura
-                    à prova d'água para medir continuamente a
-                    temperatura da água.
-
-                </p>
-
-
-                <p>
-
-                    O sensor envia as informações para um controlador,
-                    que pode ser um Arduino. O controlador compara
-                    a temperatura medida com a temperatura desejada,
-                    chamada de <strong>setpoint</strong>.
-
-                </p>
-
-
-                <p>
-
-                    Por exemplo, se a temperatura desejada for
-                    30 °C e o sensor indicar 27 °C, o controlador
-                    identifica que a água está abaixo do valor
-                    programado.
-
-                </p>
-
-
-                <p>
-
-                    Um relé pode funcionar como um interruptor
-                    controlado eletronicamente. Ele pode receber
-                    um comando do controlador e permitir o acionamento
-                    do equipamento de aquecimento.
-
-                </p>
-
-
-                <p>
-
-                    Uma bomba de circulação também pode ser utilizada
-                    como atuador. Ela movimenta a água, ajudando a
-                    distribuir a água aquecida pela piscina.
-
-                </p>
-
-
-                <p>
-
-                    Quando a temperatura atingir o valor programado,
-                    o controlador pode desligar o aquecimento.
-                    O sensor continua realizando novas medições e,
-                    caso a temperatura volte a cair, o sistema pode
-                    ligar novamente.
-
-                </p>
-
-            </div>
-
-
-
-            <!-- FLUXO -->
-
-            <div class="flow">
-
-                <h2>
-                    Funcionamento do sistema
-                </h2>
-
-
-                <div class="flow-container">
-
-
-                    <div class="flow-item">
-
-                        <span>01</span>
-
-                        <i class="fa-solid fa-temperature-half"></i>
-
-                        <h3>
-                            Sensor
-                        </h3>
-
-                        <p>
-                            Mede a temperatura da água.
-                        </p>
-
-                    </div>
-
-
-                    <div class="flow-line"></div>
-
-
-                    <div class="flow-item">
-
-                        <span>02</span>
-
-                        <i class="fa-solid fa-microchip"></i>
-
-                        <h3>
-                            Arduino
-                        </h3>
-
-                        <p>
-                            Analisa os dados recebidos.
-                        </p>
-
-                    </div>
-
-
-                    <div class="flow-line"></div>
-
-
-                    <div class="flow-item">
-
-                        <span>03</span>
-
-                        <i class="fa-solid fa-toggle-on"></i>
-
-                        <h3>
-                            Relé
-                        </h3>
-
-                        <p>
-                            Controla o acionamento.
-                        </p>
-
-                    </div>
-
-
-                    <div class="flow-line"></div>
-
-
-                    <div class="flow-item">
-
-                        <span>04</span>
-
-                        <i class="fa-solid fa-water"></i>
-
-                        <h3>
-                            Bomba
-                        </h3>
-
-                        <p>
-                            Movimenta a água.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-
-            <div class="closed-loop">
-
-                <h3>
-                    Sistema de controle em malha fechada
-                </h3>
-
-                <p>
-
-                    O sistema funciona em uma lógica de
-                    monitoramento contínuo. O sensor fornece
-                    informações ao controlador, que compara o
-                    valor medido com o valor desejado e decide
-                    se os atuadores devem funcionar. Essa
-                    sequência permite ajustar o funcionamento
-                    do sistema conforme as condições da piscina.
-
-                </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             INCLUSÃO
-        ========================== -->
-
-        <section id="inclusao" class="section inclusao">
-
-            <div class="section-title">
-
-                <span>04 — IMPACTO SOCIAL</span>
-
-                <h2>
-                    Inclusão nas aulas de natação
-                </h2>
-
-                <p>
-
-                    Pensar no aquecimento da piscina também significa
-                    pensar nas condições necessárias para que os
-                    estudantes possam participar das atividades.
-
-                </p>
-
-            </div>
-
-
-            <div class="inclusao-content">
-
-                <div class="inclusao-icon">
-
-                    <i class="fa-solid fa-people-group"></i>
-
-                </div>
-
-
-                <div class="inclusao-text">
-
-                    <h3>
-                        Uma piscina mais confortável para todos
-                    </h3>
-
-
-                    <p>
-
-                        A piscina do colégio pode ser um espaço
-                        importante para a aprendizagem, a prática
-                        de atividades físicas e a convivência entre
-                        os estudantes.
-
-                    </p>
-
-
-                    <p>
-
-                        A temperatura da água é um dos fatores que
-                        influenciam o conforto durante atividades
-                        aquáticas. Em períodos de temperaturas mais
-                        baixas, a água pode ficar menos confortável
-                        para a realização das aulas.
-
-                    </p>
-
-
-                    <p>
-
-                        Um sistema de aquecimento pode ajudar a
-                        manter a água em uma faixa de temperatura
-                        mais adequada para as atividades planejadas.
-                        Isso pode contribuir para que os estudantes
-                        tenham melhores condições de participação
-                        durante as aulas de natação.
-
-                    </p>
-
-
-                    <p>
-
-                        A inclusão também envolve pensar nas
-                        diferentes necessidades dos alunos e criar
-                        ambientes escolares nos quais todos tenham
-                        oportunidades de participar. Por isso,
-                        melhorar as condições da piscina pode fazer
-                        parte de uma proposta de escola mais
-                        acolhedora.
-
-                    </p>
-
-
-                    <p>
-
-                        Dessa forma, o projeto não busca apenas
-                        desenvolver uma solução tecnológica. Ele
-                        também relaciona ciência e responsabilidade
-                        social, procurando contribuir para um espaço
-                        escolar mais confortável, participativo
-                        e inclusivo.
-
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             SIMULADOR
-        ========================== -->
-
-        <section id="simulador" class="section simulador">
-
-            <div class="section-title">
-
-                <span>05 — INTERATIVIDADE</span>
-
-                <h2>
-                    Simulador de temperatura
-                </h2>
-
-                <p>
-
-                    Defina uma temperatura desejada e veja como
-                    o sistema poderia responder.
-
-                </p>
-
-            </div>
-
-
-            <div class="simulator-box">
-
-
-                <div class="temperature-display">
-
-                    <i class="fa-solid fa-temperature-half"></i>
-
-                    <strong id="temperature">
-                        27 °C
-                    </strong>
-
+                <div>
+                    <strong>Reflexão</strong>
                     <span>
-                        Temperatura atual
+                        ocorre quando a luz retorna ao meio
+                        após atingir uma superfície.
                     </span>
-
                 </div>
 
+                <div>
+                    <strong>Refração</strong>
+                    <span>
+                        acontece quando a luz passa de um meio
+                        para outro e sua velocidade muda.
+                    </span>
+                </div>
 
+                <div>
+                    <strong>Absorção</strong>
+                    <span>
+                        parte da energia da radiação é
+                        absorvida pelo material.
+                    </span>
+                </div>
 
-                <div class="simulator-controls">
-
-                    <label for="setpoint">
-
-                        Temperatura desejada:
-
-                    </label>
-
-
-                    <input
-                        type="range"
-                        id="setpoint"
-                        min="20"
-                        max="40"
-                        value="30">
-
-
-                    <strong>
-
-                        <span id="setpointValue">
-                            30
-                        </span>
-
-                        °C
-
-                    </strong>
-
-
-                    <button
-                        id="simulateButton"
-                        class="btn"
-                        type="button">
-
-                        Verificar sistema
-
-                    </button>
-
-
-                    <p id="simulationResult">
-
-                        O sistema está aguardando uma simulação.
-
-                    </p>
-
+                <div>
+                    <strong>Radiação óptica</strong>
+                    <span>
+                        inclui regiões como ultravioleta,
+                        luz visível e infravermelho.
+                    </span>
                 </div>
 
             </div>
 
-        </section>
+        </article>
 
 
+        <article class="card optica-card">
 
-        <!-- =========================
-             PROJETO 3D
-        ========================== -->
-
-        <section id="projeto-3d" class="section projeto-3d">
-
-            <div class="section-title">
-
-                <span>06 — MODELO</span>
-
-                <h2>
-                    Projeto 3D
-                </h2>
-
-                <p>
-
-                    Representação visual do sistema de aquecimento
-                    sustentável da piscina.
-
-                </p>
-
+            <div class="card-icon">
+                <i class="fa-solid fa-palette"></i>
             </div>
 
+            <h3>
+                Cores e eficiência
+            </h3>
 
-            <div class="model-placeholder">
+            <p>
+                A relação entre luz e cores também aparece
+                no projeto. Uma superfície escura tende a
+                absorver uma parcela maior da radiação visível
+                incidente do que uma superfície muito clara,
+                que pode refletir mais luz.
+            </p>
 
-                <i class="fa-solid fa-cube"></i>
+            <p>
+                Essa ideia pode ser relacionada ao Disco de
+                Newton: a luz branca contém diferentes
+                componentes do espectro visível, e os materiais
+                interagem com essas radiações de maneiras
+                diferentes.
+            </p>
 
-                <h3>
-                    Modelo 3D
-                </h3>
+            <p>
+                No projeto, a escolha da superfície do coletor
+                deve considerar absorção, durabilidade,
+                temperatura e eficiência do sistema.
+            </p>
 
-                <p>
+        </article>
 
-                    Nesta área será inserido o modelo 3D do projeto,
-                    mostrando elementos como a piscina, os coletores
-                    solares, a bomba, os sensores e o sistema de
-                    controle.
+    </div>
 
-                </p>
-
-            </div>
-
-        </section>
-
-    </main>
-
+</section>
 
 
-    <!-- =========================
-         RODAPÉ
-    ========================== -->
+<!-- =====================================================
+     ROBÓTICA
+===================================================== -->
 
-    <footer>
+<section class="section robotica-section" id="robotica">
+
+    <div class="section-title">
+
+        <span class="section-label">
+            AUTOMAÇÃO
+        </span>
 
         <h2>
-
-            <i class="fa-solid fa-sun"></i>
-
-            Projeto de Aquecimento Sustentável
-
+            Robótica e Programação
         </h2>
 
+        <p>
+            Sensores, controladores e atuadores podem trabalhar
+            juntos para automatizar o aquecimento da piscina.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <article class="card robotica-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-temperature-half"></i>
+            </div>
+
+            <h3>
+                Sensor de temperatura
+            </h3>
+
+            <p>
+                Um sensor de temperatura à prova d'água pode
+                ficar em contato com a água e realizar medições
+                continuamente.
+            </p>
+
+            <p>
+                Os dados coletados são enviados ao controlador,
+                que utiliza essas informações para determinar
+                se a temperatura está abaixo, próxima ou acima
+                do valor desejado.
+            </p>
+
+        </article>
+
+
+        <article class="card robotica-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-microchip"></i>
+            </div>
+
+            <h3>
+                Controlador
+            </h3>
+
+            <p>
+                Um microcontrolador, como um Arduino, pode
+                receber os dados do sensor e executar uma
+                programação baseada em uma temperatura definida.
+            </p>
+
+            <p>
+                Se a temperatura medida estiver abaixo do
+                valor desejado, o controlador pode enviar
+                um comando para ativar o sistema de
+                aquecimento.
+            </p>
+
+        </article>
+
+
+        <article class="card robotica-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-toggle-on"></i>
+            </div>
+
+            <h3>
+                Relé e atuadores
+            </h3>
+
+            <p>
+                Um relé pode funcionar como uma chave controlada
+                eletronicamente. Ele permite que o controlador
+                envie um comando para acionar equipamentos
+                apropriados do sistema.
+            </p>
+
+            <p>
+                A bomba de circulação também pode atuar no
+                processo, movimentando a água e contribuindo
+                para sua distribuição pelo sistema.
+            </p>
+
+        </article>
+
+
+        <article class="card robotica-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </div>
+
+            <h3>
+                Sistema em malha fechada
+            </h3>
+
+            <p>
+                O sistema pode trabalhar em malha fechada:
+                o sensor mede, o controlador analisa e os
+                atuadores executam a ação.
+            </p>
+
+            <p>
+                Depois da ação, uma nova medição é realizada.
+                Esse ciclo continua permitindo que o sistema
+                acompanhe as mudanças de temperatura.
+            </p>
+
+        </article>
+
+    </div>
+
+
+    <!-- FLUXO -->
+
+    <div class="fluxo">
+
+        <h3>
+            Como o sistema funciona?
+        </h3>
+
+        <div class="fluxo-container">
+
+            <div class="fluxo-item">
+                <span>01</span>
+                <i class="fa-solid fa-temperature-half"></i>
+                <strong>Sensor</strong>
+                <p>Mede a temperatura.</p>
+            </div>
+
+            <div class="fluxo-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="fluxo-item">
+                <span>02</span>
+                <i class="fa-solid fa-microchip"></i>
+                <strong>Controlador</strong>
+                <p>Compara os valores.</p>
+            </div>
+
+            <div class="fluxo-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="fluxo-item">
+                <span>03</span>
+                <i class="fa-solid fa-bolt"></i>
+                <strong>Atuador</strong>
+                <p>Aciona o aquecimento.</p>
+            </div>
+
+            <div class="fluxo-arrow">
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+
+            <div class="fluxo-item">
+                <span>04</span>
+                <i class="fa-solid fa-water"></i>
+                <strong>Circulação</strong>
+                <p>Distribui o calor.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     INCLUSÃO
+===================================================== -->
+
+<section class="section inclusao-section" id="inclusao">
+
+    <div class="section-title">
+
+        <span class="section-label">
+            INCLUSÃO E IMPACTO SOCIAL
+        </span>
+
+        <h2>
+            Uma piscina mais acessível
+        </h2>
 
         <p>
-
-            Ciência • Tecnologia • Sustentabilidade • Inclusão
-
+            A proposta de aquecimento também possui uma
+            dimensão social: criar melhores condições para
+            que os estudantes possam participar das aulas
+            de natação.
         </p>
 
+    </div>
 
-        <p class="copyright">
 
-            Projeto escolar — 2026
+    <div class="cards">
 
+        <article class="card inclusao-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-person-swimming"></i>
+            </div>
+
+            <h3>
+                Conforto durante as aulas
+            </h3>
+
+            <p>
+                A temperatura da água influencia diretamente
+                o conforto dos alunos durante atividades
+                aquáticas. Uma piscina muito fria pode tornar
+                a experiência desconfortável, principalmente
+                durante períodos de temperaturas mais baixas.
+            </p>
+
+        </article>
+
+
+        <article class="card inclusao-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-people-group"></i>
+            </div>
+
+            <h3>
+                Participação dos estudantes
+            </h3>
+
+            <p>
+                Uma condição térmica mais adequada pode
+                contribuir para que mais estudantes consigam
+                participar das atividades propostas nas aulas,
+                respeitando as necessidades individuais e as
+                orientações dos professores.
+            </p>
+
+        </article>
+
+
+        <article class="card inclusao-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <h3>
+                Bem-estar e aprendizagem
+            </h3>
+
+            <p>
+                As aulas práticas podem contribuir para o
+                desenvolvimento físico, social e educacional.
+                Por isso, pensar nas condições do espaço
+                escolar também significa pensar no bem-estar
+                dos estudantes.
+            </p>
+
+        </article>
+
+
+        <article class="card inclusao-card">
+
+            <div class="card-icon">
+                <i class="fa-solid fa-universal-access"></i>
+            </div>
+
+            <h3>
+                Inclusão na prática
+            </h3>
+
+            <p>
+                A inclusão não significa apenas permitir o
+                acesso ao espaço. Também envolve buscar
+                condições que favoreçam a participação,
+                o conforto e a segurança dos alunos nas
+                atividades escolares.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     MODELO 3D
+===================================================== -->
+
+<section class="section modelo-section" id="modelo3d">
+
+    <div class="section-title">
+
+        <span class="section-label">
+            VISUALIZAÇÃO
+        </span>
+
+        <h2>
+            Modelo 3D
+        </h2>
+
+        <p>
+            Explore uma representação simplificada do sistema
+            de aquecimento proposto.
         </p>
 
-    </footer>
+    </div>
 
 
-    <script src="script.js"></script>
+    <div class="modelo-layout">
+
+        <!-- CONTROLES -->
+
+        <div class="modelo-controles">
+
+            <h3>
+                Controle do modelo
+            </h3>
+
+            <label for="rotacaoX">
+                Inclinação vertical
+            </label>
+
+            <input
+                type="range"
+                id="rotacaoX"
+                min="-20"
+                max="40"
+                value="15">
+
+            <label for="rotacaoY">
+                Rotação horizontal
+            </label>
+
+            <input
+                type="range"
+                id="rotacaoY"
+                min="-45"
+                max="45"
+                value="-15">
+
+            <button
+                class="control-btn"
+                id="resetModelo">
+
+                <i class="fa-solid fa-rotate-left"></i>
+                Restaurar modelo
+
+            </button>
+
+        </div>
+
+
+        <!-- MODELO -->
+
+        <div class="modelo-area">
+
+            <div class="modelo-3d" id="modelo">
+
+                <div class="painel-solar">
+
+                    <div class="painel-grid">
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tubo tubo-1"></div>
+                <div class="tubo tubo-2"></div>
+
+                <div class="bomba">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+
+
+                <div class="piscina">
+
+                    <div class="agua"></div>
+
+                    <div class="borda borda-1"></div>
+                    <div class="borda borda-2"></div>
+                    <div class="borda borda-3"></div>
+                    <div class="borda borda-4"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- IMAGENS -->
+
+    <div class="projeto-imagens">
+
+        <div class="imagem-projeto">
+
+            <img
+                src="assets/projetos/projeto-piscina-1.jpg"
+                alt="Representação do projeto de aquecimento sustentável da piscina">
+
+            <p>
+                Representação do sistema de aquecimento.
+            </p>
+
+        </div>
+
+
+        <div class="imagem-projeto">
+
+            <img
+                src="assets/projetos/projeto-piscina-2.jpg"
+                alt="Representação dos componentes do sistema de aquecimento">
+
+            <p>
+                Componentes e funcionamento do projeto.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SIMULADOR
+===================================================== -->
+
+<section class="section simulador-section" id="simulador">
+
+    <div class="section-title">
+
+        <span class="section-label">
+            INTERATIVIDADE
+        </span>
+
+        <h2>
+            Simulador do sistema de aquecimento
+        </h2>
+
+        <p>
+            Altere as condições do ambiente e observe como
+            o sistema de controle poderia responder.
+        </p>
+
+    </div>
+
+
+    <div class="simulador">
+
+        <div class="simulador-form">
+
+            <h3>
+                Parâmetros da piscina
+            </h3>
+
+
+            <div class="campo">
+
+                <label for="tempAtual">
+                    Temperatura atual da água (°C)
+                </label>
+
+                <input
+                    type="number"
+                    id="tempAtual"
+                    min="5"
+                    max="45"
+                    step="0.5"
+                    value="25">
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="tempDesejada">
+                    Temperatura desejada (°C)
+                </label>
+
+                <input
+                    type="number"
+                    id="tempDesejada"
+                    min="15"
+                    max="40"
+                    step="0.5"
+                    value="30">
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="tempAmbiente">
+                    Temperatura ambiente (°C)
+                </label>
+
+                <input
+                    type="number"
+                    id="tempAmbiente"
+                    min="-5"
+                    max="45"
+                    step="0.5"
+                    value="22">
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="volumePiscina">
+                    Volume aproximado da piscina (L)
+                </label>
+
+                <input
+                    type="number"
+                    id="volumePiscina"
+                    min="500"
+                    max="1000000"
+                    step="500"
+                    value="30000">
+
+            </div>
+
+
+            <div class="campo">
+
+                <label for="sol">
+                    Intensidade solar
+                </label>
+
+                <select id="sol">
+
+                    <option value="0">
+                        Noite / sem Sol
+                    </option>
+
+                    <option value="0.3">
+                        Baixa
+                    </option>
+
+                    <option value="0.6" selected>
+                        Moderada
+                    </option>
+
+                    <option value="0.8">
+                        Alta
+                    </option>
+
+                    <option value="1">
+                        Muito alta
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <button
+                class="simulate-btn"
+                id="simularBtn">
+
+                <i class="fa-solid fa-play"></i>
+                Executar simulação
+
+            </button>
+
+        </div>
+
+
+        <!-- RESULTADOS -->
+
+        <div class="resultado-simulador">
+
+            <h3>
+                Resultado
+            </h3>
+
+
+            <div class="status-sistema" id="statusSistema">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                Preencha os parâmetros e execute a simulação.
+
+            </div>
+
+
+            <div class="resultados-grid">
+
+                <div class="resultado-card">
+
+                    <span>
+                        Diferença térmica
+                    </span>
+
+                    <strong id="diferenca">
+                        -- °C
+                    </strong>
+
+                </div>
+
+
+                <div class="resultado-card">
+
+                    <span>
+                        Potência estimada
+                    </span>
+
+                    <strong id="potencia">
+                        -- kW
+                    </strong>
+
+                </div>
+
+
+                <div class="resultado-card">
+
+                    <span>
+                        Tempo estimado
+                    </span>
+
+                    <strong id="tempo">
+                        -- h
+                    </strong>
+
+                </div>
+
+
+                <div class="resultado-card">
+
+                    <span>
+                        Bomba
+                    </span>
+
+                    <strong id="bombaStatus">
+                        -- 
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="barra-container">
+
+                <div class="barra-topo">
+
+                    <span>
+                        Necessidade de aquecimento
+                    </span>
+
+                    <strong id="porcentagem">
+                        0%
+                    </strong>
+
+                </div>
+
+                <div class="barra">
+
+                    <div
+                        class="barra-progresso"
+                        id="barraProgresso">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="explicacao" id="explicacao">
+
+                <h4>
+                    Como interpretar?
+                </h4>
+
+                <p>
+                    O sistema compara a temperatura atual
+                    com a temperatura desejada. Se a água
+                    estiver abaixo do valor definido, o
+                    controlador poderá acionar o aquecimento.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     RODAPÉ
+===================================================== -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div>
+
+            <h3>
+                <i class="fa-solid fa-water"></i>
+                Projeto Piscina
+            </h3>
+
+            <p>
+                Ciência, tecnologia, sustentabilidade
+                e inclusão no ambiente escolar.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h4>
+                Navegação
+            </h4>
+
+            <a href="#inicio">Início</a>
+            <a href="#projeto">Projeto</a>
+            <a href="#optica">Óptica</a>
+            <a href="#robotica">Robótica</a>
+            <a href="#inclusao">Inclusão</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © 2026 — Projeto escolar de aquecimento sustentável da piscina
+
+    </div>
+
+</footer>
+
+
+<button
+    class="top-btn"
+    id="topBtn"
+    aria-label="Voltar ao topo">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
