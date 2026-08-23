@@ -125,17 +125,244 @@ const explicacao =
     sensor -> controlador -> decisão -> atuador.
 */
 
-
 function executarSimulacao() {
 
-    const atual =
-        Number(tempAtual.value);
+    const atual = Number(tempAtual.value);
+    const desejada = Number(tempDesejada.value);
+    const intensidadeSolar = Number(sol.value);
 
-    const desejada =
-        Number(tempDesejada.value);
+    /* ==========================================
+       VALIDAÇÃO
+    ========================================== */
 
-    const intensidadeSolar =
-        Number(sol.value);
+    if (
+        !Number.isFinite(atual) ||
+        !Number.isFinite(desejada)
+    ) {
+
+        statusSistema.innerHTML =
+            '<i class="fa-solid fa-triangle-exclamation"></i> ' +
+            'Preencha os campos corretamente.';
+
+        return;
+    }
+
+    if (atual < 5 || atual > 45) {
+
+        statusSistema.innerHTML =
+            '<i class="fa-solid fa-triangle-exclamation"></i> ' +
+            'A temperatura atual deve estar entre 5 °C e 45 °C.';
+
+        return;
+    }
+
+    if (desejada < 15 || desejada > 40) {
+
+        statusSistema.innerHTML =
+            '<i class="fa-solid fa-triangle-exclamation"></i> ' +
+            'A temperatura desejada deve estar entre 15 °C e 40 °C.';
+
+        return;
+    }
+
+
+    /* ==========================================
+       DIFERENÇA DE TEMPERATURA
+    ========================================== */
+
+    const delta = desejada - atual;
+
+    diferenca.textContent =
+        `${delta.toFixed(1)} °C`;
+
+
+    /* ==========================================
+       TEMPERATURA JÁ ATINGIDA
+    ========================================== */
+
+    if (delta <= 0) {
+
+        tempo.textContent = "0 h";
+
+        porcentagem.textContent = "0%";
+
+        barraProgresso.style.width = "0%";
+
+        statusSistema.innerHTML =
+            '<i class="fa-solid fa-circle-check"></i> ' +
+            'Temperatura atingida. O aquecimento pode permanecer desligado.';
+
+        explicacao.innerHTML = `
+
+            <h4>
+                Sistema estabilizado
+            </h4>
+
+            <p>
+                A temperatura atual é igual ou superior
+                à temperatura desejada. O controlador
+                pode manter o aquecimento desligado,
+                enquanto o sensor continua monitorando
+                a água.
+            </p>
+
+        `;
+
+        return;
+    }
+
+
+    /* ==========================================
+       NECESSIDADE DE AQUECIMENTO
+    ========================================== */
+
+    let necessidade =
+        (delta / 10) * 100;
+
+    necessidade =
+        Math.max(
+            0,
+            Math.min(
+                necessidade,
+                100
+            )
+        );
+
+
+    /* ==========================================
+       EFEITO DA ENERGIA SOLAR
+    ========================================== */
+
+    const contribuicaoSolar =
+        intensidadeSolar * 0.35;
+
+    const necessidadeComplementar =
+        Math.max(
+            0,
+            necessidade * (1 - contribuicaoSolar)
+        );
+
+
+    /* ==========================================
+       TEMPO DIDÁTICO
+    ========================================== */
+
+    let tempoEstimado =
+        delta * 0.35;
+
+    tempoEstimado *=
+        (1 - intensidadeSolar * 0.25);
+
+    tempoEstimado =
+        Math.max(
+            tempoEstimado,
+            0.2
+        );
+
+
+    tempo.textContent =
+        `${tempoEstimado.toFixed(1)} h`;
+
+
+    /* ==========================================
+       BARRA
+    ========================================== */
+
+    porcentagem.textContent =
+        `${Math.round(necessidadeComplementar)}%`;
+
+    barraProgresso.style.width =
+        `${necessidadeComplementar}%`;
+
+
+    /* ==========================================
+       TEXTO SOBRE O SOL
+    ========================================== */
+
+    let textoSol;
+
+    if (intensidadeSolar === 0) {
+
+        textoSol =
+            "sem contribuição solar significativa";
+
+    } else if (intensidadeSolar <= 0.3) {
+
+        textoSol =
+            "com baixa contribuição solar";
+
+    } else if (intensidadeSolar <= 0.6) {
+
+        textoSol =
+            "com contribuição solar moderada";
+
+    } else if (intensidadeSolar <= 0.8) {
+
+        textoSol =
+            "com boa contribuição solar";
+
+    } else {
+
+        textoSol =
+            "com alta contribuição solar";
+
+    }
+
+
+    /* ==========================================
+       STATUS
+    ========================================== */
+
+    statusSistema.innerHTML =
+        '<i class="fa-solid fa-fire"></i> ' +
+        'Aquecimento necessário. O controlador pode acionar o sistema.';
+
+
+    /* ==========================================
+       EXPLICAÇÃO
+    ========================================== */
+
+    explicacao.innerHTML = `
+
+        <h4>
+            Resultado da simulação
+        </h4>
+
+        <p>
+            O sensor identificou uma temperatura de
+            <strong>${atual.toFixed(1)} °C</strong>,
+            enquanto o valor programado é
+            <strong>${desejada.toFixed(1)} °C</strong>.
+        </p>
+
+        <p>
+            A diferença é de
+            <strong>${delta.toFixed(1)} °C</strong>.
+            Como a temperatura está abaixo do valor
+            desejado, o controlador entende que o
+            aquecimento precisa ser acionado.
+        </p>
+
+        <p>
+            A condição solar está representada como
+            <strong>${textoSol}</strong>.
+            Neste modelo didático, uma maior intensidade
+            solar reduz a necessidade de aquecimento
+            complementar.
+        </p>
+
+        <p>
+            O tempo apresentado é apenas uma
+            <strong>estimativa para fins educativos</strong>.
+            Um sistema real precisaria considerar volume
+            da piscina, potência dos equipamentos,
+            temperatura ambiente, perdas térmicas,
+            área dos coletores e outros fatores.
+        </p>
+
+    `;
+
+}
 
 
     /* ---------------------------------------------
