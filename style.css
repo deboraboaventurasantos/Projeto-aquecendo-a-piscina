@@ -1379,11 +1379,11 @@ footer .copyright {
         0 16px 30px rgba(41, 78, 128, 0.18);
 }
 
-.image-card img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-  
+.image-card img { 
+   width: 100%; 
+   height: 220px; 
+   object-fit: cover; 
+   border-radius: 12px;
 }
 
 .image-card figcaption {
@@ -1621,22 +1621,5 @@ footer .copyright {
         height: 130px;
     }
 
-}
-
-/* =====================================================
-   IMAGEM ESPECÍFICA — MODELO 3D
-===================================================== */
-
-.modelo-3d-imagem {
-    width: 100%;
-    max-width: 850px;
-    margin: 0 auto;
-}
-
-.modelo-3d-imagem img {
-    width: 100%;
-    height: 330px;
-    object-fit: contain;
-    border-radius: 12px;
 }
 
