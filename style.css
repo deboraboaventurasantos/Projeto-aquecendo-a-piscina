@@ -1,6 +1,6 @@
-/* =====================================================
-   RESET
-===================================================== */
+/* =========================================================
+   RESET E CONFIGURAÇÕES GERAIS
+========================================================= */
 
 * {
     margin: 0;
@@ -9,1673 +9,859 @@
     scroll-behavior: smooth;
 }
 
-
-:root {
-
-    /* CORES PRINCIPAIS */
-
-    --azul: #294e80;
-    --amarelo: #fdff87;
-    --roxo: #a55cd8;
-    --verde: #5ddb49;
-
-    /* CORES NEUTRAS */
-
-    --branco: #ffffff;
-    --preto: #111111;
-    --cinza: #4f555b;
-
-    --fundo-claro: #f5f7fa;
-
-    --sombra:
-        0 10px 30px rgba(0, 0, 0, 0.12);
-
+html {
+    scroll-padding-top: 80px;
 }
-
-
-/* =====================================================
-   BODY
-===================================================== */
 
 body {
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    background: var(--fundo-claro);
-
-    color: var(--preto);
-
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: #263238;
     line-height: 1.7;
+}
 
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input {
+    font: inherit;
 }
 
 
-/* =====================================================
-   ACESSIBILIDADE
-===================================================== */
+/* =========================================================
+   ACESSIBILIDADE / FOCO
+========================================================= */
 
-a:focus,
-button:focus,
-input:focus {
-
-    outline:
-        3px solid #111;
-
-    outline-offset:
-        3px;
-
+:focus-visible {
+    outline: 3px solid #ffb703;
+    outline-offset: 3px;
 }
 
 
-/* =====================================================
-   HEADER
-===================================================== */
+/* =========================================================
+   CABEÇALHO
+========================================================= */
 
 header {
-
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 1000;
 
-    background:
-        rgba(41, 78, 128, 0.97);
-
-    box-shadow:
-        0 4px 18px rgba(0, 0, 0, 0.15);
-
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(8px);
 }
-
 
 .navbar {
-
-    max-width: 1250px;
-
-    min-height: 75px;
-
+    max-width: 1200px;
     margin: auto;
 
-    padding:
-        0 30px;
+    min-height: 75px;
+    padding: 12px 30px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
 }
-
 
 .logo {
-
-    color: var(--branco);
-
-    text-decoration: none;
-
-    font-size: 22px;
-
-    font-weight: bold;
-
+    color: #294e80;
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
 }
-
-
-.logo i {
-
-    margin-right: 8px;
-
-}
-
 
 .menu {
-
     display: flex;
-
     align-items: center;
-
-    gap: 22px;
+    gap: 8px;
 
     list-style: none;
-
 }
 
+.menu li {
+    margin: 0;
+}
 
 .menu a {
+    display: block;
 
-    color: var(--branco);
+    padding: 9px 13px;
 
     text-decoration: none;
+    color: #34495e;
+    font-weight: 600;
 
-    font-weight: bold;
+    border-radius: 8px;
 
-    transition:
-        0.3s;
-
+    transition: 0.25s ease;
 }
-
 
 .menu a:hover {
-
-    color: var(--amarelo);
-
+    background: #eaf0f7;
+    color: #294e80;
 }
 
-
-.menu-btn {
-
+#menu-btn {
     display: none;
 
     border: none;
-
     background: transparent;
 
-    color: white;
-
-    font-size: 26px;
+    color: #294e80;
+    font-size: 27px;
 
     cursor: pointer;
-
 }
 
 
-/* =====================================================
-   BOTÕES
-===================================================== */
+/* =========================================================
+   CONFIGURAÇÃO DAS SEÇÕES
+========================================================= */
 
-.btn {
+section {
+    padding: 90px 8%;
+}
 
-    display: inline-flex;
+section h2 {
+    margin-bottom: 35px;
 
+    text-align: center;
+
+    font-size: clamp(28px, 4vw, 40px);
+    line-height: 1.2;
+
+    color: #294e80;
+}
+
+section > p {
+    max-width: 900px;
+    margin: 0 auto 30px;
+}
+
+
+/* =========================================================
+   INÍCIO
+   NÃO ALTERAR A ESTRUTURA VISUAL DA SEÇÃO INICIAL
+========================================================= */
+
+.inicio {
+    min-height: 100vh;
+
+    display: flex;
     align-items: center;
-
     justify-content: center;
 
-    gap: 10px;
+    text-align: center;
 
-    padding:
-        14px 28px;
+    background: linear-gradient(
+        135deg,
+        #294e80,
+        #426b9f
+    );
 
-    background:
-        var(--azul);
+    color: white;
 
-    color:
-        white;
+    padding: 120px 20px 80px;
+}
+
+.inicio h1 {
+    margin-bottom: 20px;
+
+    font-size: clamp(40px, 7vw, 68px);
+    line-height: 1.1;
+}
+
+.inicio p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+
+    font-size: 20px;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 30px;
+
+    border-radius: 30px;
+
+    background: white;
+    color: #294e80;
 
     text-decoration: none;
+    font-weight: bold;
+
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================================
+   PROJETO
+========================================================= */
+
+#projeto {
+    background: #ffffff;
+}
+
+.projeto-intro {
+    max-width: 900px;
+    margin: 0 auto 40px;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+.projeto-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* =========================================================
+   ÓPTICA
+========================================================= */
+
+#optica {
+    background: #fff3b0;
+    color: #263238;
+}
+
+#optica h2 {
+    color: #4d3b00;
+}
+
+#optica .card {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(120, 90, 0, 0.12);
+}
+
+#optica .card h3 {
+    color: #5c4700;
+}
+
+#optica .card i {
+    color: #b88700;
+}
+
+
+/* =========================================================
+   ROBÓTICA
+========================================================= */
+
+#robotica {
+    background: #eadcf6;
+    color: #30243b;
+}
+
+#robotica h2 {
+    color: #653d83;
+}
+
+#robotica .card {
+    background: rgba(255, 255, 255, 0.75);
+    border-color: rgba(100, 60, 130, 0.12);
+}
+
+#robotica .card h3 {
+    color: #653d83;
+}
+
+#robotica .card i {
+    color: #8e5ab5;
+}
+
+
+/* =========================================================
+   INCLUSÃO
+========================================================= */
+
+#inclusao {
+    background: #dff4d8;
+    color: #26382a;
+}
+
+#inclusao h2 {
+    color: #39752d;
+}
+
+#inclusao .card {
+    background: rgba(255, 255, 255, 0.78);
+    border-color: rgba(50, 110, 40, 0.12);
+}
+
+#inclusao .card h3 {
+    color: #39752d;
+}
+
+#inclusao .card i {
+    color: #4d9a3d;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.cards {
+    max-width: 1150px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 25px;
+}
+
+.card {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    border: 1px solid #e5e9ef;
+
+    box-shadow: 0 8px 25px rgba(30, 50, 70, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 35px rgba(30, 50, 70, 0.13);
+}
+
+.card i {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 42px;
+
+    color: #294e80;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+
+    color: #294e80;
+
+    font-size: 21px;
+}
+
+.card p {
+    color: #4b5965;
+}
+
+
+/* =========================================================
+   FENÔMENOS ÓPTICOS
+========================================================= */
+
+.fenomenos {
+    margin-top: 45px;
+}
+
+.fenomenos h3 {
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    font-size: 28px;
+
+    color: #4d3b00;
+}
+
+
+/* =========================================================
+   FLUXOGRAMA DA ROBÓTICA
+========================================================= */
+
+.fluxograma {
+    max-width: 1000px;
+    margin: 45px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.fluxo-item {
+    min-width: 150px;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background: white;
+
+    border-radius: 14px;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+.fluxo-item i {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-size: 30px;
+
+    color: #8e5ab5;
+}
+
+.seta {
+    font-size: 28px;
+
+    color: #653d83;
+}
+
+
+/* =========================================================
+   MODELO 3D
+========================================================= */
+
+#modelo3d {
+    background: #ffffff;
+}
+
+.modelo-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 35px;
+
+    align-items: center;
+}
+
+.modelo-texto {
+    padding: 20px;
+}
+
+.modelo-texto h3 {
+    margin-bottom: 15px;
+
+    color: #294e80;
+
+    font-size: 27px;
+}
+
+.modelo-visual {
+    min-height: 350px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #eef3f8;
+
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   IMAGENS DO PROJETO
+========================================================= */
+
+.imagens-projeto {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    max-width: 1000px;
+
+    margin: 40px auto;
+}
+
+.imagens-projeto img {
+    width: 100%;
+
+    height: 300px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.12);
+
+    transition: 0.3s ease;
+}
+
+.imagens-projeto img:hover {
+    transform: scale(1.02);
+}
+
+
+/* =========================================================
+   SIMULADOR
+========================================================= */
+
+.simulador {
+    max-width: 1000px;
+
+    margin: 50px auto 0;
+
+    padding: 35px;
+
+    background: #f0f4f8;
+
+    border: 1px solid #dce4ec;
+
+    border-radius: 20px;
+
+    color: #263238;
+}
+
+.simulador h3 {
+    margin-bottom: 10px;
+
+    color: #294e80;
+
+    font-size: 26px;
+}
+
+.simulador-controles {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+
+    margin-top: 25px;
+}
+
+.controle {
+    padding: 20px;
+
+    background: white;
+
+    border-radius: 14px;
+
+    border: 1px solid #e1e7ed;
+}
+
+.controle label {
+    display: block;
+
+    margin-bottom: 10px;
+
+    font-weight: bold;
+
+    color: #34495e;
+}
+
+.controle input,
+.controle select {
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #bfc9d4;
+
+    border-radius: 8px;
+
+    background: white;
+
+    color: #263238;
+}
+
+.simulador button {
+    margin-top: 25px;
+
+    padding: 13px 28px;
 
     border: none;
 
-    border-radius:
-        30px;
+    border-radius: 8px;
+
+    background: #294e80;
+
+    color: white;
 
     font-weight: bold;
 
     cursor: pointer;
 
-    transition:
-        0.3s;
-
-}
-
-
-.btn:hover {
-
-    transform:
-        translateY(-3px);
-
-    filter:
-        brightness(0.85);
-
-}
-
-
-/* =====================================================
-   HERO
-===================================================== */
-
-.hero {
-
-    min-height:
-        100vh;
-
-    padding:
-        130px 8% 80px;
-
-    background:
-        var(--azul);
-
-    color:
-        white;
-
-    display:
-        flex;
-
-    justify-content:
-        center;
-
-    align-items:
-        center;
-
-    text-align:
-        center;
-
-    position:
-        relative;
-
-    overflow:
-        hidden;
-
-}
-
-
-.hero-content {
-
-    max-width:
-        900px;
-
-    position:
-        relative;
-
-    z-index:
-        2;
-
-}
-
-
-.tag {
-
-    display:
-        inline-block;
-
-    padding:
-        8px 18px;
-
-    margin-bottom:
-        20px;
-
-    border-radius:
-        30px;
-
-    background:
-        rgba(255,255,255,0.15);
-
-    color:
-        white;
-
-    font-weight:
-        bold;
-
-}
-
-
-.hero h1 {
-
-    font-size:
-        clamp(42px, 7vw, 75px);
-
-    line-height:
-        1.08;
-
-    margin-bottom:
-        25px;
-
-}
-
-
-.hero p {
-
-    max-width:
-        800px;
-
-    margin:
-        auto auto 35px;
-
-    font-size:
-        20px;
-
-}
-
-
-.hero .btn {
-
-    background:
-        white;
-
-    color:
-        var(--azul);
-
-}
-
-
-.hero-decoration {
-
-    position:
-        absolute;
-
-    inset:
-        0;
-
-    pointer-events:
-        none;
-
-}
-
-
-.hero-decoration i {
-
-    position:
-        absolute;
-
-    font-size:
-        150px;
-
-    opacity:
-        0.08;
-
-}
-
-
-.hero-decoration i:first-child {
-
-    top:
-        20%;
-
-    right:
-        10%;
-
-}
-
-
-.hero-decoration i:last-child {
-
-    bottom:
-        10%;
-
-    left:
-        8%;
-
-}
-
-
-/* =====================================================
-   SEÇÕES
-===================================================== */
-
-.section {
-
-    padding:
-        100px 8%;
-
-}
-
-
-.section-title {
-
-    max-width:
-        900px;
-
-    margin:
-        0 auto 60px;
-
-    text-align:
-        center;
-
-}
-
-
-.section-title > span {
-
-    display:
-        inline-block;
-
-    font-size:
-        13px;
-
-    font-weight:
-        bold;
-
-    letter-spacing:
-        3px;
-
-    margin-bottom:
-        8px;
-
-}
-
-
-.section-title h2 {
-
-    font-size:
-        clamp(32px, 5vw, 50px);
-
-    line-height:
-        1.2;
-
-    margin-bottom:
-        20px;
-
-}
-
-
-.section-title p {
-
-    font-size:
-        18px;
-
-}
-
-
-/* =====================================================
-   PROJETO
-===================================================== */
-
-.projeto {
-
-    background:
-        var(--azul);
-
-    color:
-        white;
-
-}
-
-
-.projeto .section-title > span {
-
-    color:
-        var(--amarelo);
-
-}
-
-
-.projeto .section-title h2,
-.projeto .section-title p {
-
-    color:
-        white;
-
-}
-
-
-.content-grid {
-
-    max-width:
-        1200px;
-
-    margin:
-        auto;
-
-    display:
-        grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:
-        60px;
-
-    align-items:
-        center;
-
-}
-
-
-.text-content h3 {
-
-    font-size:
-        26px;
-
-    margin-bottom:
-        20px;
-
-}
-
-
-.text-content p {
-
-    margin-bottom:
-        20px;
-
-}
-
-
-.projeto .text-content h3 {
-
-    color:
-        var(--amarelo);
-
-}
-
-
-/* =====================================================
-   IMAGENS DO PROJETO
-===================================================== */
-
-.image-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap:
-        20px;
-
-}
-
-
-.image-card {
-
-    background:
-        white;
-
-    border-radius:
-        18px;
-
-    overflow:
-        hidden;
-
-    box-shadow:
-        var(--sombra);
-
-}
-
-
-.image-card img {
-
-    width:
-        100%;
-
-    height:
-        280px;
-
-    object-fit:
-        cover;
-
-    display:
-        block;
-
-    transition:
-        0.4s;
-
-}
-
-
-.image-card:hover img {
-
-    transform:
-        scale(1.05);
-
-}
-
-
-.image-card figcaption {
-
-    padding:
-        15px;
-
-    text-align:
-        center;
-
-    color:
-        var(--azul);
-
-    font-weight:
-        bold;
-
-}
-
-
-/* =====================================================
-   ÓPTICA
-===================================================== */
-
-.optica {
-
-    background:
-        var(--amarelo);
-
-    color:
-        var(--preto);
-
-}
-
-
-.optica .section-title > span {
-
-    color:
-        var(--preto);
-
-}
-
-
-.optica .section-title h2,
-.optica .section-title p {
-
-    color:
-        var(--preto);
-
-}
-
-
-.content-wide {
-
-    max-width:
-        1100px;
-
-    margin:
-        auto;
-
-}
-
-
-.content-wide h3 {
-
-    font-size:
-        27px;
-
-    margin-bottom:
-        20px;
-
-}
-
-
-.content-wide h3 i {
-
-    margin-right:
-        8px;
-
-}
-
-
-.content-wide p {
-
-    margin-bottom:
-        20px;
-
-}
-
-
-/* =====================================================
-   FENÔMENOS ÓPTICOS
-===================================================== */
-
-.phenomena {
-
-    max-width:
-        1200px;
-
-    margin:
-        90px auto 0;
-
-}
-
-
-.phenomena .section-title {
-
-    margin-bottom:
-        40px;
-
-}
-
-
-.phenomena-grid {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap:
-        20px;
-
-}
-
-
-.phenomena-grid article {
-
-    padding:
-        30px 22px;
-
-    background:
-        rgba(255,255,255,0.35);
-
-    border:
-        2px solid rgba(0,0,0,0.15);
-
-    border-radius:
-        18px;
-
-    transition:
-        0.3s;
-
-}
-
-
-.phenomena-grid article:hover {
-
-    transform:
-        translateY(-6px);
-
-}
-
-
-.phenomena-grid i {
-
-    font-size:
-        35px;
-
-    color:
-        var(--preto);
-
-    margin-bottom:
-        15px;
-
-}
-
-
-.phenomena-grid h3 {
-
-    margin-bottom:
-        12px;
-
-}
-
-
-/* =====================================================
-   CONCEITOS ÓPTICA
-===================================================== */
-
-.optica-concepts {
-
-    max-width:
-        1000px;
-
-    margin:
-        70px auto 0;
-
-    padding:
-        35px;
-
-    border:
-        2px solid var(--preto);
-
-    border-radius:
-        20px;
-
-}
-
-
-.optica-concepts h3 {
-
-    text-align:
-        center;
-
-    margin-bottom:
-        25px;
-
-    font-size:
-        26px;
-
-}
-
-
-.concept-list {
-
-    display:
-        grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap:
-        20px;
-
-}
-
-
-.concept-list div {
-
-    padding:
-        20px;
-
-    background:
-        rgba(255,255,255,0.3);
-
-    border-radius:
-        12px;
-
-}
-
-
-.concept-list strong {
-
-    display:
-        block;
-
-    margin-bottom:
-        8px;
-
-}
-
-
-/* =====================================================
-   ROBÓTICA
-===================================================== */
-
-.robotica {
-
-    background:
-        var(--roxo);
-
-    color:
-        white;
-
-}
-
-
-.robotica .section-title > span {
-
-    color:
-        var(--amarelo);
-
-}
-
-
-.robotica .section-title h2,
-.robotica .section-title p {
-
-    color:
-        white;
-
-}
-
-
-.robotica .content-wide h3 {
-
-    color:
-        white;
-
-}
-
-
-.flow {
-
-    max-width:
-        1200px;
-
-    margin:
-        90px auto 0;
-
-}
-
-
-.flow > h2 {
-
-    text-align:
-        center;
-
-    margin-bottom:
-        40px;
-
-}
-
-
-.flow-container {
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-}
-
-
-.flow-item {
-
-    width:
-        190px;
-
-    min-height:
-        190px;
-
-    padding:
-        25px 15px;
-
-    background:
-        white;
-
-    color:
-        var(--preto);
-
-    border-radius:
-        18px;
-
-    text-align:
-        center;
-
-    box-shadow:
-        var(--sombra);
-
-}
-
-
-.flow-item span {
-
-    display:
-        block;
-
-    color:
-        var(--roxo);
-
-    font-weight:
-        bold;
-
-}
-
-
-.flow-item i {
-
-    font-size:
-        35px;
-
-    color:
-        var(--roxo);
-
-    margin:
-        10px;
-
-}
-
-
-.flow-item h3 {
-
-    color:
-        var(--roxo);
-
-}
-
-
-.flow-line {
-
-    width:
-        50px;
-
-    height:
-        3px;
-
-    background:
-        white;
-
-}
-
-
-.closed-loop {
-
-    max-width:
-        900px;
-
-    margin:
-        60px auto 0;
-
-    padding:
-        30px;
-
-    background:
-        rgba(255,255,255,0.18);
-
-    border:
-        2px solid rgba(255,255,255,0.4);
-
-    border-radius:
-        18px;
-
-    text-align:
-        center;
-
-}
-
-
-.closed-loop h3 {
-
-    margin-bottom:
-        15px;
-
-}
-
-
-/* =====================================================
-   INCLUSÃO
-===================================================== */
-
-.inclusao {
-
-    background:
-        var(--verde);
-
-    color:
-        var(--preto);
-
-}
-
-
-.inclusao .section-title > span {
-
-    color:
-        var(--preto);
-
-}
-
-
-.inclusao .section-title h2 {
-
-    color:
-        var(--preto);
-
-}
-
-
-.inclusao-content {
-
-    max-width:
-        1100px;
-
-    margin:
-        auto;
-
-    display:
-        grid;
-
-    grid-template-columns:
-        250px 1fr;
-
-    gap:
-        50px;
-
-    align-items:
-        center;
-
-}
-
-
-.inclusao-icon {
-
-    width:
-        210px;
-
-    height:
-        210px;
-
-    margin:
-        auto;
-
-    border-radius:
-        50%;
-
-    background:
-        rgba(255,255,255,0.45);
-
-    display:
-        flex;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-}
-
-
-.inclusao-icon i {
-
-    font-size:
-        90px;
-
-}
-
-
-.inclusao-text {
-
-    background:
-        rgba(255,255,255,0.35);
-
-    padding:
-        35px;
-
-    border-radius:
-        20px;
-
-}
-
-
-.inclusao-text h3 {
-
-    font-size:
-        28px;
-
-    margin-bottom:
-        20px;
-
-}
-
-
-.inclusao-text p {
-
-    margin-bottom:
-        18px;
-
-}
-
-
-/* =====================================================
-   SIMULADOR
-===================================================== */
-
-.simulador {
-
-    background:
-        #f3f6f9;
-
-}
-
-
-.simulator-box {
-
-    max-width:
-        850px;
-
-    margin:
-        auto;
-
-    display:
-        grid;
-
-    grid-template-columns:
-        1fr 1.5fr;
-
-    gap:
-        40px;
-
-    padding:
-        40px;
-
-    background:
-        white;
-
-    border-radius:
-        25px;
-
-    box-shadow:
-        var(--sombra);
-
-}
-
-
-.temperature-display {
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    text-align:
-        center;
-
-}
-
-
-.temperature-display i {
-
-    font-size:
-        60px;
-
-    color:
-        var(--azul);
-
-}
-
-
-.temperature-display strong {
-
-    font-size:
-        45px;
-
-    color:
-        var(--azul);
-
-}
-
-
-.temperature-display span {
-
-    color:
-        var(--cinza);
-
-}
-
-
-.simulator-controls {
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    justify-content:
-        center;
-
-    gap:
-        15px;
-
-}
-
-
-.simulator-controls label {
-
-    color:
-        var(--azul);
-
-    font-weight:
-        bold;
-
-}
-
-
-#setpoint {
-
-    width:
-        100%;
-
-    accent-color:
-        var(--azul);
-
-}
-
-
-#simulationResult {
-
-    padding:
-        15px;
-
-    background:
-        #eef3f8;
-
-    border-radius:
-        10px;
-
-    color:
-        var(--azul);
-
-}
-
-
-/* =====================================================
-   PROJETO 3D
-===================================================== */
-
-.projeto-3d {
-
-    background:
-        var(--azul);
-
-    color:
-        white;
-
-}
-
-
-.projeto-3d .section-title > span {
-
-    color:
-        var(--amarelo);
-
+    transition: 0.3s;
 }
-
-
-.model-placeholder {
 
-    max-width:
-        850px;
+.simulador button:hover {
+    background: #1e3b63;
 
-    min-height:
-        330px;
-
-    margin:
-        auto;
-
-    padding:
-        40px;
-
-    display:
-        flex;
-
-    flex-direction:
-        column;
-
-    align-items:
-        center;
-
-    justify-content:
-        center;
-
-    text-align:
-        center;
-
-    background:
-        rgba(255,255,255,0.12);
-
-    border:
-        2px dashed rgba(255,255,255,0.7);
-
-    border-radius:
-        25px;
-
+    transform: translateY(-2px);
 }
-
 
-.model-placeholder i {
-
-    font-size:
-        75px;
-
-    color:
-        var(--amarelo);
-
-    margin-bottom:
-        20px;
-
-}
+#resultado-simulador {
+    margin-top: 25px;
 
+    padding: 20px;
 
-.model-placeholder h3 {
+    background: white;
 
-    font-size:
-        30px;
+    border-left: 5px solid #294e80;
 
-    margin-bottom:
-        10px;
+    border-radius: 8px;
 
+    font-size: 17px;
 }
 
 
-/* =====================================================
-   FOOTER
-===================================================== */
+/* =========================================================
+   RODAPÉ
+========================================================= */
 
 footer {
+    padding: 35px 20px;
 
-    background:
-        #1c3558;
+    text-align: center;
 
-    color:
-        white;
+    background: #294e80;
 
-    text-align:
-        center;
+    color: white;
+}
 
-    padding:
-        45px 20px;
-
+footer p {
+    margin: 5px 0;
 }
 
 
-footer h2 {
+/* =========================================================
+   ANIMAÇÕES
+========================================================= */
 
-    margin-bottom:
-        10px;
+.card,
+.modelo-visual,
+.imagens-projeto {
+    animation: aparecer 0.7s ease both;
+}
 
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 
-footer .copyright {
+/* =========================================================
+   RESPONSIVIDADE — TABLETS
+========================================================= */
 
-    margin-top:
-        15px;
-
-    font-size:
-        14px;
-
-    opacity:
-        0.8;
-
-}
-
-
-/* =====================================================
-   RESPONSIVIDADE
-===================================================== */
-
-@media (max-width: 1000px) {
-
-    .menu {
-
-        gap:
-            12px;
-
-    }
-
-
-    .content-grid {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .phenomena-grid {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-    }
-
-
-    .concept-list {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .inclusao-content {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .flow-container {
-
-        flex-wrap:
-            wrap;
-
-        gap:
-            15px;
-
-    }
-
-
-    .flow-line {
-
-        display:
-            none;
-
-    }
-
-
-    .simulator-box {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-}
-
-
-@media (max-width: 750px) {
+@media (max-width: 900px) {
 
     .navbar {
-
-        padding:
-            0 20px;
-
+        padding: 12px 20px;
     }
-
-
-    .menu-btn {
-
-        display:
-            block;
-
-    }
-
 
     .menu {
-
-        display:
-            none;
-
-        position:
-            absolute;
-
-        top:
-            75px;
-
-        left:
-            0;
-
-        width:
-            100%;
-
-        padding:
-            20px;
-
-        background:
-            var(--azul);
-
-        flex-direction:
-            column;
-
-        text-align:
-            center;
-
+        gap: 2px;
     }
 
+    .menu a {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .projeto-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .modelo-container {
+        grid-template-columns: 1fr;
+    }
+
+    .simulador-controles {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE — CELULAR
+========================================================= */
+
+@media (max-width: 700px) {
+
+    section {
+        padding: 70px 6%;
+    }
+
+    .navbar {
+        min-height: 68px;
+    }
+
+    #menu-btn {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+
+        top: 68px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 15px;
+
+        background: white;
+
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+    }
 
     .menu.active {
-
-        display:
-            flex;
-
+        display: flex;
     }
-
 
     .menu li {
-
-        margin:
-            7px 0;
-
+        width: 100%;
     }
 
+    .menu a {
+        width: 100%;
 
-    .hero {
+        padding: 12px;
 
-        padding:
-            120px 20px 70px;
-
+        text-align: center;
     }
 
+    .inicio {
+        min-height: 100svh;
 
-    .hero p {
-
-        font-size:
-            17px;
-
+        padding-top: 100px;
     }
 
-
-    .section {
-
-        padding:
-            75px 20px;
-
+    .inicio h1 {
+        font-size: 42px;
     }
 
-
-    .image-grid {
-
-        grid-template-columns:
-            1fr;
-
+    .inicio p {
+        font-size: 17px;
     }
 
-
-    .phenomena-grid {
-
-        grid-template-columns:
-            1fr;
-
+    .projeto-grid {
+        grid-template-columns: 1fr;
     }
 
-
-    .image-card img {
-
-        height:
-            230px;
-
+    .cards {
+        grid-template-columns: 1fr;
     }
 
-
-    .simulator-box {
-
-        padding:
-            25px;
-
+    .imagens-projeto {
+        grid-template-columns: 1fr;
     }
 
-
-    .inclusao-icon {
-
-        width:
-            170px;
-
-        height:
-            170px;
-
+    .imagens-projeto img {
+        height: 230px;
     }
 
-
-    .inclusao-icon i {
-
-        font-size:
-            65px;
-
+    .modelo-visual {
+        min-height: 280px;
     }
 
+    .simulador {
+        padding: 22px;
+    }
+
+    .fluxograma {
+        flex-direction: column;
+    }
+
+    .seta {
+        transform: rotate(90deg);
+    }
+}
+
+
+/* =========================================================
+   TELAS MUITO PEQUENAS
+========================================================= */
+
+@media (max-width: 400px) {
+
+    section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .inicio h1 {
+        font-size: 35px;
+    }
+
+    section h2 {
+        font-size: 28px;
+    }
+
+    .card {
+        padding: 23px;
+    }
+
+    .simulador {
+        padding: 18px;
+    }
+}
+
+
+/* =========================================================
+   REDUÇÃO DE MOVIMENTO
+   Para usuários que preferem menos animações
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+        scroll-behavior: auto !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
