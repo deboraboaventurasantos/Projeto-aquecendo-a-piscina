@@ -995,7 +995,7 @@ header {
 footer {
     background: #4f78a8
 
-    color: white;
+    color: black;
 
     padding: 65px 6% 25px;
 }
@@ -1027,7 +1027,7 @@ footer {
 }
 
 .footer-logo i {
-    color: #fdff87;
+    color: blue;
 
     font-size: 1.8rem;
 }
@@ -1044,7 +1044,7 @@ footer {
 .footer-info h3 {
     margin-bottom: 16px;
 
-    color: #fdff87;
+    color: blue;
 }
 
 .footer-links a {
@@ -1060,7 +1060,7 @@ footer {
 }
 
 .footer-links a:hover {
-    color: #fdff87;
+    color: blue;
 
     transform: translateX(4px);
 }
